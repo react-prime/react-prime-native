@@ -1,5 +1,1 @@
-import SentryBoundary from './SentryBoundary';
-
-export {
-  SentryBoundary,
-};
+export { default as Container } from './Container';

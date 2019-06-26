@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {  } from './styled';
+import { HomeScreenContainer } from './styled';
 
 const HomeScreen = () => (
   <HomeScreenContainer>

@@ -1,10 +1,12 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components/native';
-import { Platform, View, Text } from 'react-native';
+import { Platform, Text } from 'react-native';
 import { Provider } from 'react-redux';
 
 import theme from 'styles/theme';
 import { store } from './store';
+
+import { Container } from 'common/general';
 
 const instructions = Platform.select({
   ios: 'Welcome to React Native Prime on iOS',
@@ -16,9 +18,9 @@ class Main extends React.PureComponent {
     return (
       <Provider store={store}>
         <ThemeProvider theme={theme}>
-          <View>
+          <Container>
             <Text>{instructions}</Text>
-          </View>
+          </Container>
         </ThemeProvider>
       </Provider>
     );
