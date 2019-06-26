@@ -1,6 +1,6 @@
 import { createSwitchNavigator } from 'react-navigation';
 
-import LoadingScreen from 'screens/loading/LoadingScreen';
+import { LoadingScreen } from 'screens/general';
 import MainNavigator from './MainNavigator';
 
 const RootNavigator = createSwitchNavigator({

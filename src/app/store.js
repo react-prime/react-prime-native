@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { connect } from 'react-redux';
 import {
-  reduxifyNavigator,
+  createReduxContainer,
   createReactNavigationReduxMiddleware,
   createNavigationReducer,
 } from 'react-navigation-redux-helpers';
@@ -12,21 +12,21 @@ import * as appReducers from 'ducks';
 import * as api from 'services/api';
 
 import RootNavigator from 'navigators/RootNavigator';
-const navigationReducer = createNavigationReducer(RootNavigator);
+const navReducer = createNavigationReducer(RootNavigator);
 
 const middleware = applyMiddleware(
-  thunk.withExtraArgument({ api, handleRewardResponse }),
+  thunk.withExtraArgument(api),
   createReactNavigationReduxMiddleware('root', state => state.nav),
 );
 
-const App = reduxifyNavigator(RootNavigator, 'root');
+const App = createReduxContainer(RootNavigator, 'root');
 const mapStateToProps = state => ({
   state: state.nav,
 });
 
 const reducers = combineReducers({
   ...appReducers,
-  nav: navigationReducer,
+  nav: navReducer,
 });
 
 export const AppWithNavigationState = connect(mapStateToProps)(App);

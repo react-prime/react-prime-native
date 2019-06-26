@@ -1,17 +1,19 @@
+import { AsyncStorage } from 'react-native';
 import qs from 'qs';
-import API_ENDPOINT from 'config/api';
+import config from './config';
 
-// Will fix withAuth when api is ready
+const getTokenAsync = async () => {
+  return await AsyncStorage.getItem('x-access-token');
+}
+
 export default ({
-  method, path, query, body, withAuth = true, file = false, error,
+  method, path, query, body, withAuth = config.defaultWithAuth, file = false, error,
 }) => ({
-  path: `${API_ENDPOINT}${path}${query ? `?${query ? `&${qs.stringify(query, { encode: false })}` : ''}` : ''}`,
+  path: `${config.apiUrl}${path}${query ? `?${qs.stringify(query, { encode: false })}` : ''}`,
   options: {
     headers: {
       'Content-Type': 'application/json',
-      'Cache-Control': 'no-cache, no-store, must-revalidate',
-      Pragma: 'no-cache',
-      Expires: 0,
+      ...(withAuth ? { 'x-access-token': getTokenAsync() } : {}),
     },
     method,
     ...(body ? { body: JSON.stringify(body) } : {}),

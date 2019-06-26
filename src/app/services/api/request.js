@@ -1,41 +1,37 @@
-import 'isomorphic-fetch';
+import { AsyncStorage } from 'react-native';
+import 'cross-fetch/polyfill';
 
-import getAsyncHeaders from './getAsyncHeaders';
 import redirectToLogin from './redirectToLogin';
+import triggerErrorMessage from './triggerErrorMessage';
+import handleStatusCodes from './handleStatusCodes';
 
 export default ({
-  path, options,
-}) => new Promise((resolve, reject) => {
-  const extendedOptions = Object.assign({}, options);
-  getAsyncHeaders()
-    .then((headers) => {
-      if (headers) {
-        extendedOptions.headers = Object.assign(extendedOptions.headers, headers);
+  path, options, file, errorConfig = {},
+}) => new Promise(async (resolve, reject) => {
+  const token = await AsyncStorage.getItem('x-access-token');
+  if (!token) return redirectToLogin();
+
+  fetch(path, options)
+    .then((response) => {
+      if (handleStatusCodes(response.status)) return;
+
+      if (response.ok) {
+        if (file) return response.blob();
+        return response.json();
       }
-      if (__DEV__) console.log('options: ', extendedOptions); // eslint-disable-line no-console
-      fetch(path, extendedOptions)
-        .then((response) => {
-          if (__DEV__) console.log('REQUEST RESPONSE: ', response); // eslint-disable-line no-console
-          if (!response.ok) {
-            reject(new Error(response._bodyInit));
-          } else {
-            const json = JSON.parse(response._bodyInit);
-            resolve(json);
-          }
-        })
-        .catch(({ json }) => {
-          try {
-            json
-              .then(() => {
-                reject(redirectToLogin);
-              })
-              .catch();
-          } catch (err) {
-            reject(redirectToLogin);
-          }
-        });
+
+      return Promise.reject(response.json());
     })
-    .catch(() => {
-      reject(redirectToLogin);
+    .then((json) => { resolve(json); })
+    .catch((json) => {
+      try {
+        json.then((err) => {
+          triggerErrorMessage(errorConfig, err);
+          reject(err);
+        }).catch();
+      } catch (err) {
+        triggerErrorMessage(errorConfig, json);
+        reject(json);
+      }
     });
 });

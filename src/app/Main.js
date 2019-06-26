@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components/native';
-import { Platform } from 'react-native';
+import { Platform, View, Text } from 'react-native';
 import { Provider } from 'react-redux';
 
 import theme from 'styles/theme';
@@ -16,9 +16,9 @@ class Main extends React.PureComponent {
     return (
       <Provider store={store}>
         <ThemeProvider theme={theme}>
-          <SentryBoundary>
-            {instructions}
-          </SentryBoundary>
+          <View>
+            <Text>{instructions}</Text>
+          </View>
         </ThemeProvider>
       </Provider>
     );

@@ -5,13 +5,13 @@ import { HomeScreen } from 'screens/general';
 
 const MainNavigator = createStackNavigator(
   {
+    Home: HomeScreen,
     // Tabs: {
     //   screen: TabNavigator,
     // },
-    Home: HomeScreen,
   },
   {
-    initialRouteName: 'Tabs',
+    initialRouteName: 'Home',
     headerMode: 'none',
   },
 );
