@@ -1,10 +1,10 @@
 import { createSwitchNavigator } from 'react-navigation';
 
-import { LoadingScreen } from 'screens/general';
+import { Loading } from 'screens/general';
 import MainNavigator from './MainNavigator';
 
 const RootNavigator = createSwitchNavigator({
-  Loading: LoadingScreen,
+  Loading: Loading,
   Main: MainNavigator,
 }, {
   initialRouteName: 'Loading',

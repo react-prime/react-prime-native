@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from 'react-native';
 import PT from 'prop-types';
 import { withNavigation } from 'react-navigation';
 
@@ -8,15 +9,17 @@ class LoadingScreen extends React.Component {
   componentDidMount() {
     const { navigation } = this.props;
 
+    console.log('navigation', navigation);
+
     setTimeout(() => {
-      navigation.navigate('Home');
-    }, 5000);
+      navigation.navigate('Main');
+    }, 2000);
   }
 
   render() {
     return (
       <LoadingContainer>
-        Loading screen
+        <Text>Loading screen</Text>
       </LoadingContainer>
     );
   }
