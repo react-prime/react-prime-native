@@ -17,8 +17,6 @@ export default {
     mintCream: '#f7fcfc',
   },
   fonts: {
-    regular: 'HeeboRegular',
-    medium: 'HeeboMedium',
-    bold: 'HeeboBold',
+    regular: 'Helvetica',
   },
 };

@@ -16,10 +16,12 @@ const navReducer = createNavigationReducer(RootNavigator);
 
 const middleware = applyMiddleware(
   thunk.withExtraArgument(api),
-  createReactNavigationReduxMiddleware('root', state => state.nav),
+  createReactNavigationReduxMiddleware(
+    state => state.nav,
+  ),
 );
 
-const App = createReduxContainer(RootNavigator, 'root');
+const App = createReduxContainer(RootNavigator);
 const mapStateToProps = state => ({
   state: state.nav,
 });
