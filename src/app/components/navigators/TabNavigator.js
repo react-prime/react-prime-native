@@ -22,12 +22,12 @@ const TabNavigator = createBottomTabNavigator(
   {
     initialRouteName: 'DashboardTab',
     tabBarOptions: {
-      activeTintColor: theme.colors.lightSeaGreen,
-      inactiveTintColor: theme.colors.darkSlateGray,
+      activeTintColor: theme.colors.black,
+      inactiveTintColor: theme.colors.gray,
       style: {
-        height: 83,
+        height: 70,
         borderTopWidth: 1,
-        borderTopColor: 'rgba(0,0,0,0.1)',
+        borderTopColor: theme.colors.prime,
         paddingBottom: isIphoneX ? 24 : 14,
         paddingTop: 12,
         paddingHorizontal: 8,
