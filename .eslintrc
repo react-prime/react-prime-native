@@ -1,14 +1,22 @@
 {
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:react-native/all"
+  ],
+  "plugins": [
+    "react",
+    "react-native"
+  ],
   "env": {
-    "node": true,
-    "es6": true
+    "react-native/react-native": true
   },
   "globals": {
     "__DEV__": false,
     "require": false,
     "XMLHttpRequest": false,
     "FileReader": true,
-    "fetch": true
+    "fetch": false
   },
   "settings": {
     "import/resolver": {
@@ -37,13 +45,12 @@
         "internal"
       ]
     }],
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 2,
+    "react-native/no-raw-text": 2,
     "react/destructuring-assignment": 0,
-    "react/jsx-tag-spacing": {
-      "closingSlash": "never",
-      "beforeSelfClosing": "always",
-      "afterOpening": "never",
-      "beforeClosing": "never"
-    },
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "react/no-unused-prop-types": 2,
     "react/prop-types": 2,
@@ -58,7 +65,5 @@
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
     "quotes": ["error", "single"]
-  },
-  "parser": "babel-eslint",
-  "extends": "airbnb"
+  }
 }

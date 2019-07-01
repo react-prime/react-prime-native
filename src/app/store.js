@@ -12,6 +12,7 @@ import * as appReducers from 'ducks';
 import * as api from 'services/api';
 
 import RootNavigator from 'navigators/RootNavigator';
+
 const navReducer = createNavigationReducer(RootNavigator);
 
 const middleware = applyMiddleware(

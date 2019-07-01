@@ -25,9 +25,10 @@ const SvgWrapper = ({ width, height, ...props }) => {
       </Svg>
     </IconWrapper>
   );
-}
+};
 
 SvgWrapper.propTypes = {
+  children: PT.node.isRequired,
   height: PT.string.isRequired,
   width: PT.string.isRequired,
 };

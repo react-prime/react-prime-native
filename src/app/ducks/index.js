@@ -1,5 +1,1 @@
-import data from './data';
-
-export {
-  data,
-};
+export { default as data } from './data';

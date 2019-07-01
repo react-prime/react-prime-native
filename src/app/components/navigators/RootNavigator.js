@@ -4,7 +4,7 @@ import { Loading } from 'screens/general';
 import MainNavigator from './MainNavigator';
 
 const RootNavigator = createSwitchNavigator({
-  Loading: Loading,
+  Loading,
   Main: MainNavigator,
 }, {
   initialRouteName: 'Loading',

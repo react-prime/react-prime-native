@@ -1,4 +1,5 @@
 import React from 'react';
+import PT from 'prop-types';
 import { createBottomTabNavigator } from 'react-navigation';
 
 import theme from 'styles/theme';
@@ -12,7 +13,7 @@ const TabNavigator = createBottomTabNavigator(
     DashboardTab: {
       screen: Dashboard,
       navigationOptions: () => ({
-        tabBarIcon: ({ tintColor }) => (
+        tabBarIcon: ({ tintColor }) => ( // eslint-disable-line
           <Bolt width="24" height="35" fill={tintColor} />
         ),
         tabBarLabel: 'Dashboard',
@@ -21,7 +22,7 @@ const TabNavigator = createBottomTabNavigator(
     OverviewTab: {
       screen: Overview,
       navigationOptions: () => ({
-        tabBarIcon: ({ tintColor }) => (
+        tabBarIcon: ({ tintColor }) => ( // eslint-disable-line
           <Bolt width="24" height="35" fill={tintColor} />
         ),
         tabBarLabel: 'Overview',
