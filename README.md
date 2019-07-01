@@ -12,6 +12,7 @@ This will start the project with the correct emulator. After that you can run th
 
 #### Tips
 1. Use the `react-native-debugger` [See the Github page](https://github.com/jhen0409/react-native-debugger)
-2. Don't forget to test on real devices every now and then
+2. Read [in the docs](https://facebook.github.io/react-native/docs/linking-libraries-ios) or on [this Stack Overflow thread](https://stackoverflow.com/questions/49874385/what-is-react-native-link) about `react-native-link`.
 3. Enable Hot Module Reloading in your emulator. On Android press `CMD + M` on iOS `CMD + D`.
 4. For SVG's use `react-native-svg`, easily convert SVG's with [this SVGR tool](https://www.smooth-code.com/open-source/svgr/playground/).
+5. Don't forget to test on real devices every now and then

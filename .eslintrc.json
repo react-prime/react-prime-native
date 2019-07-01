@@ -16,16 +16,48 @@
     }
   },
   "rules": {
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
-    "no-use-before-define": ["error", { "functions": true, "classes": true, "variables": false }],
-    "prefer-destructuring": 0,
-    "react/destructuring-assignment": 0,
-    "no-nested-ternary": 0,
+    "array-bracket-spacing": ["error", "never"],
+    "arrow-parens": 2,
+    "arrow-spacing": ["error", { "before": true, "after": true }],
     "camelcase": 0,
     "consistent-return": 0,
-    "import/prefer-default-export": 0,
+    "comma-dangle": ["error", "always-multiline"],
+    "eol-last": ["error", "always"],
+    "no-console": [2, {"allow": ["info", "error"]}],
+    "no-use-before-define": ["error", { "functions": true, "classes": true, "variables": false }],
+    "no-nested-ternary": 0,
     "no-underscore-dangle": 0,
-    "max-len": 0
+    "max-len": 0,
+    "import/prefer-default-export": 0,
+    "import/no-duplicates": "error",
+    "import/order": ["error", {
+      "groups": [
+        "builtin",
+        "external",
+        "internal"
+      ]
+    }],
+    "react/destructuring-assignment": 0,
+    "react/jsx-tag-spacing": {
+      "closingSlash": "never",
+      "beforeSelfClosing": "always",
+      "afterOpening": "never",
+      "beforeClosing": "never"
+    },
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "react/no-unused-prop-types": 2,
+    "react/prop-types": 2,
+    "react/self-closing-comp": ["error", { "component": true, "html": true }],
+    "prefer-destructuring": 0,
+    "space-before-blocks": "error",
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "space-in-parens": ["error", "never"],
+    "space-infix-ops": "error",
+    "quotes": ["error", "single"]
   },
   "parser": "babel-eslint",
   "extends": "airbnb"
