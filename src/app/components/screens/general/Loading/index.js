@@ -9,8 +9,6 @@ class LoadingScreen extends React.Component {
   componentDidMount() {
     const { navigation } = this.props;
 
-    console.log('navigation', navigation);
-
     setTimeout(() => {
       navigation.navigate('Main');
     }, 2000);
