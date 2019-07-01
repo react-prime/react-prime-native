@@ -4,5 +4,12 @@ Install all dependencies as states in the [React Native docs under the "React Na
 Also install xCode and Android Studio as suggested in the docs.
 
 Before you start install the project dependencies with `npm install`.
-Run the project with `react-native start --reset-cache` to always get the latest version.
+Next you can run the project for the playform of choice:
+1. `react-native run-ios`
+2. `react-native run-android`
 
+This will start the project with the correct emulator. After that you can run the project with `react-native start --reset-cache` to always get the latest version and use the emulator which is already active.
+
+#### Tips
+1. Use the `react-native-debugger` [See the Github page](https://github.com/jhen0409/react-native-debugger)
+2. Don't forget to test on real devices every now and then
