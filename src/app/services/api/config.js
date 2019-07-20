@@ -10,14 +10,14 @@ export default {
    * Used to redirect for unauthorized calls
    * @see redirectToLogin.js
    */
-  loginPath: '/login',
+  loginPath: 'Auth',
 
   /**
    * If the app isn't depended on authorization put this to false
    * If this is turned off it won't use x-access-token in localStorage
    * @see generateOptions.js
    */
-  defaultWithAuth: true,
+  defaultWithAuth: false,
 
   /**
    * Trigger general error message for api failures

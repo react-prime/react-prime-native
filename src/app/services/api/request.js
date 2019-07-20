@@ -1,16 +1,10 @@
-import { AsyncStorage } from 'react-native';
 import 'cross-fetch/polyfill';
-
-import redirectToLogin from './redirectToLogin';
 import triggerErrorMessage from './triggerErrorMessage';
 import handleStatusCodes from './handleStatusCodes';
 
 export default ({
   path, options, file, errorConfig = {},
 }) => new Promise(async (resolve, reject) => {
-  const token = await AsyncStorage.getItem('x-access-token');
-  if (!token) return redirectToLogin();
-
   fetch(path, options)
     .then((response) => {
       if (handleStatusCodes(response.status)) return;
