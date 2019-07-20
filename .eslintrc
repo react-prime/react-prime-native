@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "airbnb",
+    "react-app",
     "plugin:react-native/all"
   ],
   "plugins": [
@@ -26,44 +26,92 @@
   "rules": {
     "array-bracket-spacing": ["error", "never"],
     "arrow-parens": 2,
-    "arrow-spacing": ["error", { "before": true, "after": true }],
-    "camelcase": 0,
-    "consistent-return": 0,
+    "arrow-spacing": ["error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "block-spacing": ["error", "always"],
     "comma-dangle": ["error", "always-multiline"],
-    "eol-last": ["error", "always"],
-    "no-console": [2, {"allow": ["info", "error"]}],
-    "no-use-before-define": ["error", { "functions": true, "classes": true, "variables": false }],
-    "no-nested-ternary": 0,
-    "no-underscore-dangle": 0,
-    "max-len": 0,
-    "import/prefer-default-export": 0,
+    "import/first": "error",
     "import/no-duplicates": "error",
-    "import/order": ["error", {
-      "groups": [
-        "builtin",
-        "external",
-        "internal"
-      ]
-    }],
+    "import/order": ["error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal"
+        ]
+      }
+    ],
+    "indent": ["error", 2],
+    "jsx-quotes": ["error", "prefer-double"],
+    "key-spacing": ["error",
+      {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "keyword-spacing": ["error",
+      {
+        "before": true,
+        "after": true,
+        "overrides": {
+          "return": {
+            "after": true
+          },
+          "throw": {
+            "after": true
+          },
+          "case": {
+            "after": true
+          }
+        }
+      }
+    ],
+    "no-multiple-empty-lines": ["error",
+      {
+        "max": 2,
+        "maxEOF": 0
+      }
+    ],
+    "no-console": [2,
+      {
+        "allow": [
+          "info",
+          "error"
+        ]
+      }
+    ],
+    "no-trailing-spaces": ["error"],
+    "object-curly-spacing": ["error", "always"],
+    "prefer-const": ["error"],
+    "quotes": ["error", "single"],
+    "react/no-unused-prop-types": 2,
+    "react/prop-types": 2,
+    "react/self-closing-comp": ["error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
     "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
     "react-native/no-inline-styles": 2,
     "react-native/no-color-literals": 2,
     "react-native/no-raw-text": 2,
-    "react/destructuring-assignment": 0,
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
-    "react/no-unused-prop-types": 2,
-    "react/prop-types": 2,
-    "react/self-closing-comp": ["error", { "component": true, "html": true }],
-    "prefer-destructuring": 0,
+    "semi": ["error", "always"],
     "space-before-blocks": "error",
-    "space-before-function-paren": ["error", {
-      "anonymous": "always",
-      "named": "never",
-      "asyncArrow": "always"
-    }],
+    "space-before-function-paren": ["error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
-    "quotes": ["error", "single"]
+    "eol-last": ["error", "always"]
   }
 }
