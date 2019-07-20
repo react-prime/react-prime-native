@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "start": "react-native start",
+    "lint": "eslint --ext .jsx --ext .js src/",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android"
   },
   "dependencies": {
     "cross-fetch": "3.0.4",
