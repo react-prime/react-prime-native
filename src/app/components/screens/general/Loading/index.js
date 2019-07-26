@@ -1,27 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Text } from 'react-native';
 import PT from 'prop-types';
 import { withNavigation } from 'react-navigation';
 
 import { LoadingContainer } from './styled';
 
-class LoadingScreen extends React.Component {
-  componentDidMount() {
-    const { navigation } = this.props;
-
+const LoadingScreen = ({ navigation }) => {
+  useEffect(() => {
     setTimeout(() => {
       navigation.navigate('Main');
     }, 2000);
-  }
+  });
 
-  render() {
-    return (
-      <LoadingContainer>
-        <Text>Loading screen</Text>
-      </LoadingContainer>
-    );
-  }
-}
+  return (
+    <LoadingContainer>
+      <Text>Loading screen</Text>
+    </LoadingContainer>
+  );
+};
 
 LoadingScreen.propTypes = {
   navigation: PT.shape({
