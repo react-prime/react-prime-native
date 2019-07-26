@@ -10,7 +10,7 @@ const LoadingScreen = ({ navigation }) => {
     setTimeout(() => {
       navigation.navigate('Main');
     }, 2000);
-  });
+  }, [navigation]);
 
   return (
     <LoadingContainer>
