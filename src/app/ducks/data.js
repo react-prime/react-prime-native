@@ -15,27 +15,27 @@ const initialState = {
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case GET_DATA:
-      return {
-        ...state,
-        error: false,
-        loading: true,
-      };
-    case GET_DATA_SUCCESS:
-      return {
-        ...state,
-        data: payload,
-        error: false,
-        loading: false,
-      };
-    case GET_DATA_FAILED:
-      return {
-        ...state,
-        loading: false,
-        error: true,
-      };
-    default:
-      return state;
+  case GET_DATA:
+    return {
+      ...state,
+      error: false,
+      loading: true,
+    };
+  case GET_DATA_SUCCESS:
+    return {
+      ...state,
+      data: payload,
+      error: false,
+      loading: false,
+    };
+  case GET_DATA_FAILED:
+    return {
+      ...state,
+      loading: false,
+      error: true,
+    };
+  default:
+    return state;
   }
 };
 
