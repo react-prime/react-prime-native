@@ -1,5 +1,4 @@
 import React from 'react';
-import PT from 'prop-types';
 import { createBottomTabNavigator } from 'react-navigation';
 
 import theme from 'styles/theme';
