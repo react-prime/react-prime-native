@@ -20,17 +20,17 @@ This will start the project with the correct emulator.
 
 ## Environments
 
+### App icons
 
 ## Packages
 How to use packages:
 `react-native-config`
 `react-native-bootsplash`
 `@react-native-community/async-storage`
+`react-native-device-info` (with ThemeProvider in App.js)
 
-## Debugging
 
-
-## Packages
+### Other packages
 This boilerplate for React Native is build with:
 * [React Native](https://github.com/facebook/react-native)
 * [React](https://reactjs.org/)
@@ -42,3 +42,7 @@ This boilerplate for React Native is build with:
 * [Redux Dev Tools](https://github.com/gaearon/redux-devtools) for next generation DX (developer experience).
 * [ESLint](http://eslint.org) to maintain a consistent code style
 * Refer to `package.json` for more details
+
+
+## Debugging
+[Flipper](https://github.com/facebook/flipper)

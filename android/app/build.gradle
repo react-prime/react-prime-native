@@ -1,4 +1,16 @@
+project.ext.envConfigFiles = [
+  devdebug: ".env.dev",
+  devrelease: ".env.dev",
+  acceptdebug: ".env.acc",
+  acceptrelease: ".env.acc",
+  proddebug: ".env.prod",
+  prodrelease: ".env.prod",
+]
 apply plugin: "com.android.application"
+apply plugin: 'io.fabric'
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+apply from: "$project.rootDir/buildConfig/buildConfig.gradle"
 
 import com.android.build.OutputFile
 
@@ -132,7 +144,8 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
+        resValue "string", "build_config_package", "com.reactprimenative"
     }
     splits {
         abi {
