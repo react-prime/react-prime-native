@@ -20,6 +20,13 @@ Before you start, install the project dependencies (1/2; Make sure Cocoapods is 
 This will start the project with the correct emulator.
 
 
+## @TODO Setup
+1. Github repository
+2. App Store Connect / App Signing
+3. Crashlytics / Fabric.io / buildConfig
+4. Bitrise
+
+
 ## Environments
 The different environments are managed via productFlavors for Android and schemes for iOS. The Android productFlavors can be found in `android/app/build.gradle`. For iOS you can find the schemes by opening the `ios/PROJECT-NAME.xcworkspace` file. The schemes will be shown in the top left corner.
 
@@ -76,10 +83,3 @@ export default App;
 
 ## Debugging
 The upcoming React Native version 0.62.x will include a new debugging tool by default called [Flipper](https://fbflipper.com/). This seems like a promising library, but for now I can recommend to check out [react-native-debugger](https://github.com/jhen0409/react-native-debugger). This let's you debug for example the Redux Store and Network Requests.
-
-
-## Setup
-1. Github repository
-2. App Store Connect / App Signing
-3. Crashlytics / Fabric.io / buildConfig
-4. Bitrise
