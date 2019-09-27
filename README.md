@@ -28,16 +28,26 @@ The app icons can be changed. For Android you can find the icons in `android/app
 
 
 ## Packages
-How to use packages:
-`react-native-config`
-`react-native-bootsplash`
+How to use third-party packages:
+
+### `react-native-config`
+To manage different variables for the different environments we use [`react-native-config`](https://github.com/luggit/react-native-config). It loads an `.env.*` file via productFlavors on Android and schemes on iOS. This is all setup and works out of the box. You can add secrets in your environment files. It's up to you if you add them to your `.gitignore`.
+
+### `react-native-bootsplash`
+For creating a custom splashscreen we use [`react-native-bootsplash`](https://github.com/zoontek/react-native-bootsplash). This packages is created to design your launch screen using the platform depended tools [Xcode layout editor](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/) and [Android drawable resource](https://developer.android.com/guide/topics/resources/drawable-resource). You can find how to create splash screens over there.
+
+
 `@react-native-community/async-storage`
+
+
 `react-native-device-info` (with ThemeProvider in App.js)
+
+
 `react-native-reanimated`
 
 
 ## Debugging
-Download the latest version of [Flipper](https://fbflipper.com/docs/getting-started.html) for macOS and follow the "Getting Started" guide.
+The upcoming React Native version 0.62.x will include a new debugging tool by default called [Flipper](https://fbflipper.com/). This seems like a promising library, but for now I can recommend to check out [react-native-debugger](https://github.com/jhen0409/react-native-debugger). This let's you debug for example the Redux Store and Network Requests.
 
 
 ## Setup
