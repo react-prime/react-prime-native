@@ -32,6 +32,7 @@ How to use packages:
 `react-native-bootsplash`
 `@react-native-community/async-storage`
 `react-native-device-info` (with ThemeProvider in App.js)
+`react-native-reanimated`
 
 
 ## Debugging
