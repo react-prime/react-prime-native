@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components/native';
 import RNBootSplash from 'react-native-bootsplash';
 
 import theme from 'styles/theme';
-import { store, AppWithNavigationState } from './store';
+import { store, AppContainer } from './store';
 
 const App = () => {
   useEffect(() => {
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <AppWithNavigationState />
+        <AppContainer />
       </ThemeProvider>
     </Provider>
   );
