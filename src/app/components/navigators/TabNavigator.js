@@ -1,8 +1,7 @@
 import React from 'react';
-import { createBottomTabNavigator } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import theme from 'styles/theme';
-import { isIphoneX } from 'services/deviceInfo';
 
 import { Dashboard, Overview } from 'screens/general';
 import { Bolt } from 'common/svg';
@@ -35,7 +34,7 @@ const TabNavigator = createBottomTabNavigator(
       inactiveTintColor: theme.colors.gray,
       style: {
         height: 75,
-        paddingBottom: isIphoneX ? 24 : 12,
+        paddingBottom: 12,
         paddingTop: 12,
         paddingHorizontal: 8,
         backgroundColor: theme.colors.black,
