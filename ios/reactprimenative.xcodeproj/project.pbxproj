@@ -32,6 +32,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* reactprimenativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reactprimenativeTests.m; sourceTree = "<group>"; };
 		04F2008615F048D067FEC6DC /* Pods-reactprimenative-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-reactprimenative-tvOS/Pods-reactprimenative-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1398B2EA6EABB2FAE0C7F754 /* Pods-reactprimenativeTests.prod - debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenativeTests.prod - debug.xcconfig"; path = "Target Support Files/Pods-reactprimenativeTests/Pods-reactprimenativeTests.prod - debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* reactprimenative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reactprimenative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = reactprimenative/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = reactprimenative/AppDelegate.m; sourceTree = "<group>"; };
@@ -39,7 +40,11 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reactprimenative/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reactprimenative/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reactprimenative/main.m; sourceTree = "<group>"; };
+		18F8000A47993AE659951FFA /* Pods-reactprimenative.prod - release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.prod - release.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.prod - release.xcconfig"; sourceTree = "<group>"; };
+		1DA0549542A12430DCF7F5A4 /* Pods-reactprimenative.acc - debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.acc - debug.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.acc - debug.xcconfig"; sourceTree = "<group>"; };
+		25831BF34C0496DF8E7963DC /* Pods-reactprimenativeTests.acc - debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenativeTests.acc - debug.xcconfig"; path = "Target Support Files/Pods-reactprimenativeTests/Pods-reactprimenativeTests.acc - debug.xcconfig"; sourceTree = "<group>"; };
 		492F237568038EAE494DCFB0 /* Pods-reactprimenative-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative-tvOS.release.xcconfig"; path = "Target Support Files/Pods-reactprimenative-tvOS/Pods-reactprimenative-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		51347548A7674BCD013C9336 /* Pods-reactprimenative.test - release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.test - release.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.test - release.xcconfig"; sourceTree = "<group>"; };
 		5B0A1281D102BB6132D8A5DF /* Pods-reactprimenativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenativeTests.release.xcconfig"; path = "Target Support Files/Pods-reactprimenativeTests/Pods-reactprimenativeTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B0D2FE9F638CEFC9BB1EBBF /* Pods-reactprimenative-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-reactprimenative-tvOSTests/Pods-reactprimenative-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		619F6A86CF9334933BF9A99F /* libPods-reactprimenative-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactprimenative-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,11 +52,18 @@
 		6B63EC2D845146A1D737E8C7 /* libPods-reactprimenative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactprimenative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F966401D6B90786961B5035 /* Pods-reactprimenative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.release.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.release.xcconfig"; sourceTree = "<group>"; };
 		78B399C2B3F5C74140A1F816 /* Pods-reactprimenative-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-reactprimenative-tvOSTests/Pods-reactprimenative-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A6D6B6FD3841C8E0B7F9320 /* Pods-reactprimenativeTests.test - debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenativeTests.test - debug.xcconfig"; path = "Target Support Files/Pods-reactprimenativeTests/Pods-reactprimenativeTests.test - debug.xcconfig"; sourceTree = "<group>"; };
 		7CB1A76BF3F8E8B829E359E6 /* libPods-reactprimenative-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactprimenative-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83D50BE63F3A0DE46590F73 /* Pods-reactprimenative.acc - release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.acc - release.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.acc - release.xcconfig"; sourceTree = "<group>"; };
+		B9518F6940C7AA83EE0453FD /* Pods-reactprimenativeTests.test - release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenativeTests.test - release.xcconfig"; path = "Target Support Files/Pods-reactprimenativeTests/Pods-reactprimenativeTests.test - release.xcconfig"; sourceTree = "<group>"; };
+		BF06258C38730A3BA14EEE67 /* Pods-reactprimenative.test - debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.test - debug.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.test - debug.xcconfig"; sourceTree = "<group>"; };
 		C8F7BA60BD7985780BFB2D33 /* Pods-reactprimenativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenativeTests.debug.xcconfig"; path = "Target Support Files/Pods-reactprimenativeTests/Pods-reactprimenativeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF64A439FC967494B82343C7 /* Pods-reactprimenativeTests.acc - release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenativeTests.acc - release.xcconfig"; path = "Target Support Files/Pods-reactprimenativeTests/Pods-reactprimenativeTests.acc - release.xcconfig"; sourceTree = "<group>"; };
+		D0FC4FE7712D6CE3DD2844EC /* Pods-reactprimenativeTests.prod - release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenativeTests.prod - release.xcconfig"; path = "Target Support Files/Pods-reactprimenativeTests/Pods-reactprimenativeTests.prod - release.xcconfig"; sourceTree = "<group>"; };
 		DED399ADCB4682460B8530AA /* Pods-reactprimenative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.debug.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		EDC756BDA85B2687668B4B47 /* Pods-reactprimenative.prod - debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.prod - debug.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.prod - debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,18 @@
 				78B399C2B3F5C74140A1F816 /* Pods-reactprimenative-tvOSTests.release.xcconfig */,
 				C8F7BA60BD7985780BFB2D33 /* Pods-reactprimenativeTests.debug.xcconfig */,
 				5B0A1281D102BB6132D8A5DF /* Pods-reactprimenativeTests.release.xcconfig */,
+				EDC756BDA85B2687668B4B47 /* Pods-reactprimenative.prod - debug.xcconfig */,
+				1DA0549542A12430DCF7F5A4 /* Pods-reactprimenative.acc - debug.xcconfig */,
+				BF06258C38730A3BA14EEE67 /* Pods-reactprimenative.test - debug.xcconfig */,
+				18F8000A47993AE659951FFA /* Pods-reactprimenative.prod - release.xcconfig */,
+				B83D50BE63F3A0DE46590F73 /* Pods-reactprimenative.acc - release.xcconfig */,
+				51347548A7674BCD013C9336 /* Pods-reactprimenative.test - release.xcconfig */,
+				1398B2EA6EABB2FAE0C7F754 /* Pods-reactprimenativeTests.prod - debug.xcconfig */,
+				25831BF34C0496DF8E7963DC /* Pods-reactprimenativeTests.acc - debug.xcconfig */,
+				7A6D6B6FD3841C8E0B7F9320 /* Pods-reactprimenativeTests.test - debug.xcconfig */,
+				D0FC4FE7712D6CE3DD2844EC /* Pods-reactprimenativeTests.prod - release.xcconfig */,
+				CF64A439FC967494B82343C7 /* Pods-reactprimenativeTests.acc - release.xcconfig */,
+				B9518F6940C7AA83EE0453FD /* Pods-reactprimenativeTests.test - release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -273,7 +297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2E85869BF79C2482B16924F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -383,7 +407,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Prod - Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8F7BA60BD7985780BFB2D33 /* Pods-reactprimenativeTests.debug.xcconfig */;
+			baseConfigurationReference = 1398B2EA6EABB2FAE0C7F754 /* Pods-reactprimenativeTests.prod - debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -406,7 +430,7 @@
 		};
 		00E356F71AD99517003FC87E /* Prod - Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B0A1281D102BB6132D8A5DF /* Pods-reactprimenativeTests.release.xcconfig */;
+			baseConfigurationReference = D0FC4FE7712D6CE3DD2844EC /* Pods-reactprimenativeTests.prod - release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -426,7 +450,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Prod - Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DED399ADCB4682460B8530AA /* Pods-reactprimenative.debug.xcconfig */;
+			baseConfigurationReference = EDC756BDA85B2687668B4B47 /* Pods-reactprimenative.prod - debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -447,7 +471,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Prod - Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F966401D6B90786961B5035 /* Pods-reactprimenative.release.xcconfig */;
+			baseConfigurationReference = 18F8000A47993AE659951FFA /* Pods-reactprimenative.prod - release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -520,7 +544,7 @@
 		};
 		38329FAE233DF06A000C5D53 /* Acc - Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DED399ADCB4682460B8530AA /* Pods-reactprimenative.debug.xcconfig */;
+			baseConfigurationReference = 1DA0549542A12430DCF7F5A4 /* Pods-reactprimenative.acc - debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -541,7 +565,7 @@
 		};
 		38329FAF233DF06A000C5D53 /* Acc - Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8F7BA60BD7985780BFB2D33 /* Pods-reactprimenativeTests.debug.xcconfig */;
+			baseConfigurationReference = 25831BF34C0496DF8E7963DC /* Pods-reactprimenativeTests.acc - debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -610,7 +634,7 @@
 		};
 		38329FB1233DF074000C5D53 /* Acc - Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F966401D6B90786961B5035 /* Pods-reactprimenative.release.xcconfig */;
+			baseConfigurationReference = B83D50BE63F3A0DE46590F73 /* Pods-reactprimenative.acc - release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -630,7 +654,7 @@
 		};
 		38329FB2233DF074000C5D53 /* Acc - Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B0A1281D102BB6132D8A5DF /* Pods-reactprimenativeTests.release.xcconfig */;
+			baseConfigurationReference = CF64A439FC967494B82343C7 /* Pods-reactprimenativeTests.acc - release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -703,7 +727,7 @@
 		};
 		38329FB4233DF080000C5D53 /* Test - Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DED399ADCB4682460B8530AA /* Pods-reactprimenative.debug.xcconfig */;
+			baseConfigurationReference = BF06258C38730A3BA14EEE67 /* Pods-reactprimenative.test - debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -724,7 +748,7 @@
 		};
 		38329FB5233DF080000C5D53 /* Test - Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8F7BA60BD7985780BFB2D33 /* Pods-reactprimenativeTests.debug.xcconfig */;
+			baseConfigurationReference = 7A6D6B6FD3841C8E0B7F9320 /* Pods-reactprimenativeTests.test - debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -793,7 +817,7 @@
 		};
 		38329FB7233DF086000C5D53 /* Test - Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F966401D6B90786961B5035 /* Pods-reactprimenative.release.xcconfig */;
+			baseConfigurationReference = 51347548A7674BCD013C9336 /* Pods-reactprimenative.test - release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -813,7 +837,7 @@
 		};
 		38329FB8233DF086000C5D53 /* Test - Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B0A1281D102BB6132D8A5DF /* Pods-reactprimenativeTests.release.xcconfig */;
+			baseConfigurationReference = B9518F6940C7AA83EE0453FD /* Pods-reactprimenativeTests.test - release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
