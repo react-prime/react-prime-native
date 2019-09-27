@@ -37,7 +37,7 @@ How to use packages:
 
 
 ## Debugging
-[Flipper](https://github.com/facebook/flipper)
+Download the latest version of [Flipper](https://fbflipper.com/docs/getting-started.html) for macOS and follow the "Getting Started" guide.
 
 
 ## Setup
