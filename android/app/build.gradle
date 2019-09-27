@@ -163,6 +163,40 @@ android {
             keyPassword 'android'
         }
     }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        dev {
+            dimension "default"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative test\""
+            manifestPlaceholders = [
+                appIcon: "@mipmap/ic_launcher_test",
+                appIconRound: "@mipmap/ic_launcher_test"
+            ]
+        }
+        accept {
+            dimension "default"
+            applicationIdSuffix ".acc"
+            versionNameSuffix "-acc"
+            buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative acc\""
+            manifestPlaceholders = [
+                appIcon: "@mipmap/ic_launcher_acc",
+                appIconRound: "@mipmap/ic_launcher_acc"
+            ]
+        }
+        prod {
+            dimension "default"
+            buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative\""
+            manifestPlaceholders = [
+                appIcon: "@mipmap/ic_launcher",
+                appIconRound: "@mipmap/ic_launcher"
+            ]
+        }
+    }
+
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
