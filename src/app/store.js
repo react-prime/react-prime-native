@@ -1,38 +1,29 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { connect } from 'react-redux';
-import {
-  createReduxContainer,
-  createReactNavigationReduxMiddleware,
-  createNavigationReducer,
-} from 'react-navigation-redux-helpers';
 import thunk from 'redux-thunk';
+import { createAppContainer } from 'react-navigation';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import * as appReducers from 'ducks';
-import * as api from 'services/api';
+import api from 'services/api';
 
 import RootNavigator from 'navigators/RootNavigator';
 
-const navReducer = createNavigationReducer(RootNavigator);
-
-const middleware = applyMiddleware(
-  thunk.withExtraArgument(api),
-  createReactNavigationReduxMiddleware(
-    (state) => state.nav,
-  ),
-);
-
-const App = createReduxContainer(RootNavigator);
-const mapStateToProps = (state) => ({
-  state: state.nav,
-});
+const middleware = applyMiddleware(thunk.withExtraArgument(api));
 
 const reducers = combineReducers({
   ...appReducers,
-  nav: navReducer,
 });
 
-export const AppWithNavigationState = connect(mapStateToProps)(App);
+const rootReducer = (state, action) => {
+  if (action.type === 'RESET_APP') {
+    state = undefined;
+  }
+
+  return reducers(state, action);
+};
+
+export const AppContainer = createAppContainer(RootNavigator);
+
 export const store = __DEV__
-  ? createStore(reducers, composeWithDevTools(middleware))
-  : createStore(reducers, middleware);
+  ? createStore(rootReducer, composeWithDevTools(middleware))
+  : createStore(rootReducer, middleware);
