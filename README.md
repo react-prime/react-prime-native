@@ -3,24 +3,28 @@
 </p>
 
 # React Native Prime
-
 This boilerplate is based on the core principles of [React Prime](https://github.com/JBostelaar/react-prime/).
 
 Install all dependencies as described in the [React Native docs under the "React Native CLI Quickstart" section](https://facebook.github.io/react-native/docs/getting-started "React Native Docs"). Also install Xcode and Android Studio as suggested in the docs.
 
-## Installation
-To install the project we recommend to use our [NPX command create-react-prime](https://github.com/react-prime/create-react-prime). To create a React Native project you can run `npx create-react-prime CUSTOMNAME --type native`.
 
-Before you start, install the project dependencies with `npm install`.
-Next run the React Native metro bundler in a terminal tab (1). In a seperate terminal tab you have to run the project for the platform of choice (2):
-1. `npm run start start -- --reset-cache`
-2. `npm run ios` or `npm run android`
+## Installation
+To install the project we recommend to use our [NPX command create-react-prime](https://github.com/react-prime/create-react-prime) (Don't forget to select the "React Native CLI Quickstart" tab instead of "Expo CLI Quickstart"). To create a React Native project you can run `npx create-react-prime PROJECT-NAME --type native`.
+
+Before you start, install the project dependencies (1/2). Next run the React Native metro bundler in a terminal tab (3). In a seperate terminal tab you have to run the project for the platform of choice (4):
+1. `npm install`
+2. `cd ios && pod install`
+3. `npm run start start -- --reset-cache`
+4. `npm run ios` or `npm run android`
 
 This will start the project with the correct emulator.
 
+
 ## Environments
 
+
 ### App icons
+
 
 ## Packages
 How to use packages:
@@ -30,19 +34,13 @@ How to use packages:
 `react-native-device-info` (with ThemeProvider in App.js)
 
 
-### Other packages
-This boilerplate for React Native is build with:
-* [React Native](https://github.com/facebook/react-native)
-* [React](https://reactjs.org/)
-* [Redux](https://redux.js.org/)
-* [Redux Thunk](https://github.com/gaearon/redux-thunk) to handle async actions
-* [React Navigation](https://github.com/react-navigation/react-navigation)
-* [Styled-Components](https://www.styled-components.com)
-* [Babel](http://babeljs.io) for ES6 and ES7
-* [Redux Dev Tools](https://github.com/gaearon/redux-devtools) for next generation DX (developer experience).
-* [ESLint](http://eslint.org) to maintain a consistent code style
-* Refer to `package.json` for more details
-
-
 ## Debugging
 [Flipper](https://github.com/facebook/flipper)
+
+
+## Setup
+1. Github repository
+2. Bitrise
+3. App Store Connect / App Signing
+4. Crashlytics / Fabric.io / buildConfig
+5. Bitrise
