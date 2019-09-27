@@ -20,13 +20,6 @@ Before you start, install the project dependencies (1/2; Make sure Cocoapods is 
 This will start the project with the correct emulator.
 
 
-## @TODO Setup
-1. Github repository
-2. App Store Connect / App Signing
-3. Crashlytics / Fabric.io / buildConfig
-4. Bitrise
-
-
 ## Environments
 The different environments are managed via productFlavors for Android and schemes for iOS. The Android productFlavors can be found in `android/app/build.gradle`. For iOS you can find the schemes by opening the `ios/PROJECT-NAME.xcworkspace` file. The schemes will be shown in the top left corner.
 
@@ -79,6 +72,10 @@ const App = () => {
 
 export default App;
 ```
+
+#### `react-native-testing-library`
+@TODO...
+[`react-native-testing-library`](https://callstack.github.io/react-native-testing-library/docs/getting-started)
 
 
 ## Debugging
