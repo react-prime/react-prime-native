@@ -5,17 +5,18 @@
 # React Native Prime
 This boilerplate is based on the core principles of [React Prime](https://github.com/JBostelaar/react-prime/).
 
-Install all dependencies as described in the [React Native docs under the "React Native CLI Quickstart" section](https://facebook.github.io/react-native/docs/getting-started "React Native Docs"). Also install Xcode and Android Studio as suggested in the docs.
+Install all dependencies as described in the [React Native docs](https://facebook.github.io/react-native/docs/getting-started "React Native Docs") (Don't forget to select the "React Native CLI Quickstart" tab instead of "Expo CLI Quickstart"). Also install Xcode and Android Studio as suggested in the docs.
 
 
 ## Installation
-To install the project we recommend to use our [NPX command create-react-prime](https://github.com/react-prime/create-react-prime) (Don't forget to select the "React Native CLI Quickstart" tab instead of "Expo CLI Quickstart"). To create a React Native project you can run `npx create-react-prime PROJECT-NAME --type native`.
+To install the project we recommend to use our [NPX command create-react-prime](https://github.com/react-prime/create-react-prime). To create a React Native project you can run `npx create-react-prime PROJECT-NAME --type native`.
 
 Before you start, install the project dependencies (1/2; Make sure Cocoapods is installed as well). Next run the React Native metro bundler in a terminal tab (3). In a seperate terminal tab you have to run the project for the platform of choice (4):
 1. `npm install`
 2. `cd ios && pod install`
 3. `npm run start start -- --reset-cache`
 4. `npm run ios` or `npm run android`
+5. Add your app to App Store Connect and to Fabric.io (both with code signing)
 
 This will start the project with the correct emulator.
 
