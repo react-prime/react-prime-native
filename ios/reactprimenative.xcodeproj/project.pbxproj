@@ -546,7 +546,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DA0549542A12430DCF7F5A4 /* Pods-reactprimenative.acc - debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAcc;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = reactprimenative/Info.plist;
@@ -636,7 +636,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B83D50BE63F3A0DE46590F73 /* Pods-reactprimenative.acc - release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAcc;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = reactprimenative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -729,7 +729,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF06258C38730A3BA14EEE67 /* Pods-reactprimenative.test - debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTest;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = reactprimenative/Info.plist;
@@ -819,7 +819,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51347548A7674BCD013C9336 /* Pods-reactprimenative.test - release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTest;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = reactprimenative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
