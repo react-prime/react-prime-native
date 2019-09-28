@@ -8,7 +8,7 @@ const GET_DATA_SUCCESS = 'data/GET_SUCCESS';
 const GET_DATA_FAILED = 'data/GET_FAILED';
 
 const initialState = {
-  data: {},
+  success: false,
   error: false,
   loading: false,
 };
@@ -24,7 +24,7 @@ export default (state = initialState, { type, payload }) => {
   case GET_DATA_SUCCESS:
     return {
       ...state,
-      data: payload,
+      success: true,
       error: false,
       loading: false,
     };
@@ -41,11 +41,10 @@ export default (state = initialState, { type, payload }) => {
 
 export const getDataSuccess = createAction(GET_DATA_SUCCESS);
 export const getDataFailed = createAction(GET_DATA_FAILED);
-
 export const getData = () => (dispatch) => {
   dispatch({ type: GET_DATA });
 
   setTimeout(() => {
-    dispatch(getDataSuccess({ success: true }));
+    dispatch(getDataSuccess());
   }, 2000);
 };
