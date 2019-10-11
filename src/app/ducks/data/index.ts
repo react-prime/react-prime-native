@@ -18,27 +18,27 @@ const initialState: i.DataState = {
 
 export default (state = initialState, action: ActionType<typeof dataActions>) => {
   switch (action.type) {
-    case 'data/GET':
-      return {
-        ...state,
-        error: false,
-        loading: true,
-      };
-    case 'data/GET_SUCCESS':
-      return {
-        ...state,
-        data: action.payload,
-        error: false,
-        loading: false,
-      };
-    case 'data/GET_FAILED':
-      return {
-        ...state,
-        loading: false,
-        error: true,
-      };
-    default:
-      return state;
+  case 'data/GET':
+    return {
+      ...state,
+      error: false,
+      loading: true,
+    };
+  case 'data/GET_SUCCESS':
+    return {
+      ...state,
+      data: action.payload,
+      error: false,
+      loading: false,
+    };
+  case 'data/GET_FAILED':
+    return {
+      ...state,
+      loading: false,
+      error: true,
+    };
+  default:
+    return state;
   }
 };
 

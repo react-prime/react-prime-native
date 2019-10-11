@@ -1,5 +1,4 @@
 import React from 'react';
-import PT from 'prop-types';
 import styled from 'styled-components';
 import { View } from 'react-native';
 import Svg from 'react-native-svg';
@@ -9,7 +8,7 @@ const IconWrapper = styled(View)`
   justify-content: center;
 `;
 
-const SvgWrapper = ({ width, height, ...props }) => {
+const SvgWrapper: React.FC<SvgWrapperProps> = ({ width, height, ...props }) => {
   const viewBoxWidth = width;
   const viewBoxHeight = height;
   const viewBoxRatio = viewBoxWidth / viewBoxHeight;
@@ -17,8 +16,8 @@ const SvgWrapper = ({ width, height, ...props }) => {
   return (
     <IconWrapper>
       <Svg
-        width={width || (height && parseInt(height * viewBoxRatio, 10))}
-        height={height || (width && parseInt(width / viewBoxRatio, 10))}
+        width={width || (height && height * viewBoxRatio)}
+        height={height || (width && width / viewBoxRatio)}
         viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
       >
         {props.children}
@@ -27,10 +26,9 @@ const SvgWrapper = ({ width, height, ...props }) => {
   );
 };
 
-SvgWrapper.propTypes = {
-  children: PT.node.isRequired,
-  height: PT.string.isRequired,
-  width: PT.string.isRequired,
-};
+type SvgWrapperProps = {
+  height: number;
+  width: number;
+}
 
 export default SvgWrapper;
