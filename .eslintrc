@@ -77,14 +77,9 @@
         "maxEOF": 0
       }
     ],
-    "no-console": [2,
-      {
-        "allow": [
-          "info",
-          "error"
-        ]
-      }
-    ],
+    "no-console": [2, {
+      "allow": ["info", "error"]
+    }],
     "no-trailing-spaces": ["error"],
     "object-curly-spacing": ["error", "always"],
     "prefer-const": ["error"],
@@ -113,6 +108,19 @@
     ],
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
-    "eol-last": ["error", "always"]
+    "eol-last": ["error", "always"],
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/explicit-function-return-type": false,
+    "@typescript-eslint/no-empty-interface": false,
+    "@typescript-eslint/prefer-interface": false,
+    "@typescript-eslint/explicit-member-accessibility": [true, "no-public"],
+    "@typescript-eslint/no-use-before-define": false,
+    "@typescript-eslint/no-object-literal-type-assertion": false,
+    "@typescript-eslint/no-parameter-properties": false,
+    "@typescript-eslint/camelcase": false,
+    "@typescript-eslint/prefer-namespace-keyword": false,
+    "@typescript-eslint/no-namespace": false,
+    "@typescript-eslint/no-explicit-any": false,
+    "@typescript-eslint/no-non-null-assertion": false
   }
 }
