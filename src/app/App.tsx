@@ -6,7 +6,7 @@ import RNBootSplash from 'react-native-bootsplash';
 import theme from 'styles/theme';
 import { store, AppContainer } from './store';
 
-const App = () => {
+const App: React.FC = () => {
   useEffect(() => {
     RNBootSplash.hide({ duration: 250 });
   }, []);
