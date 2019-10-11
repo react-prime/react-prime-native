@@ -37,6 +37,10 @@
     "@babel/plugin-proposal-export-namespace-from": "7.5.2",
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/runtime": "7.6.2",
+    "@types/react": "16.9.5",
+    "@types/react-native": "0.60.19",
+    "@types/react-navigation": "3.0.8",
+    "@types/react-redux": "7.1.4",
     "babel-eslint": "10.0.3",
     "babel-plugin-module-resolver": "3.2.0",
     "babel-plugin-styled-components": "1.10.6",
@@ -50,7 +54,9 @@
     "eslint-plugin-react-hooks": "2.1.2",
     "eslint-plugin-react-native": "3.7.0",
     "jetifier": "^1.6.4",
-    "metro-react-native-babel-preset": "0.56.0"
+    "metro-react-native-babel-preset": "0.56.0",
+    "react-native-typescript-transformer": "1.2.13",
+    "typescript": "3.6.4"
   },
   "xcodeSchemes": {
     "Debug": [

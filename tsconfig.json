@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "paths": {
+      "common/*": ["src/components/common/*"],
+      "modules/*": ["src/components/modules/*"],
+      "config/*": ["src/config/*"],
+      "config": ["src/config/index"],
+      "ducks/*": ["src/ducks/*"],
+      "ducks": ["src/ducks/index"],
+      "images/*": ["src/static/images/*"],
+      "server": ["server/index"],
+      "services/*": ["src/services/*"],
+      "store": ["src/store"],
+      "styles/*": ["src/styles/*"],
+      "styles": ["src/styles/index"],
+      "types": ["src/types/index"],
+      "vectors/*": ["src/static/vectors/*"],
+      "styled-components": ["src/services/styled-components"]
+    },
+    "typeRoots": ["node_modules/@types"],
+  },
+
+  "exclude": [
+    "node_modules",
+    "e2e",
+    "**/*.json",
+    "**/*.spec.ts",
+  ]
+}
