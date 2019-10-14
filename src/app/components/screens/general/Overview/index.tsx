@@ -8,7 +8,7 @@ const instructions = Platform.select({
   android: 'Overview screen on Android',
 });
 
-const Overview = () => (
+const Overview: React.FC = () => (
   <OverviewContainer>
     <Text>{instructions}</Text>
   </OverviewContainer>

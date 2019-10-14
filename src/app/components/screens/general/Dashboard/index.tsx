@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import PT from 'prop-types';
+import * as i from 'types';
 import { connect } from 'react-redux';
 import { Platform, Text } from 'react-native';
 
@@ -12,7 +12,7 @@ const instructions = Platform.select({
   android: 'Welcome to React Native Prime on Android',
 });
 
-const Dashboard = ({ getData, loading, success }) => {
+const Dashboard: React.FC<DashboardProps> = ({ getData, loading, data }) => {
   useEffect(() => {
     getData();
   }, [getData]);
@@ -20,22 +20,21 @@ const Dashboard = ({ getData, loading, success }) => {
   return (
     <DashboardContainer>
       <Text>{instructions}</Text>
-
       {loading && <Text>Loading</Text>}
-      {success && <Text>Data from Redux is loaded</Text>}
+      {data && <Text>Data from Redux is loaded</Text>}
     </DashboardContainer>
   );
 };
 
-Dashboard.propTypes = {
-  getData: PT.func.isRequired,
-  loading: PT.bool.isRequired,
-  success: PT.bool.isRequired,
-};
+type DashboardProps = {
+  data?: boolean;
+  getData: i.GetData['action'];
+  loading: boolean;
+}
 
 export default connect(
-  (state) => ({
-    success: state.data.success,
+  (state: i.ReduxState) => ({
+    data: state.data.data,
     loading: state.data.loading,
   }),
   { getData },
