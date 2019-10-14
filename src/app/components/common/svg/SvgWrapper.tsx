@@ -8,7 +8,7 @@ const IconWrapper = styled(View)`
   justify-content: center;
 `;
 
-const SvgWrapper: React.FC<SvgWrapperProps> = ({ width, height, ...props }) => {
+const SvgWrapper: React.FC<SvgWrapperProps> = ({ width, height, children }) => {
   const viewBoxWidth = width;
   const viewBoxHeight = height;
   const viewBoxRatio = viewBoxWidth / viewBoxHeight;
@@ -20,7 +20,7 @@ const SvgWrapper: React.FC<SvgWrapperProps> = ({ width, height, ...props }) => {
         height={height || (width && width / viewBoxRatio)}
         viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
       >
-        {props.children}
+        {children}
       </Svg>
     </IconWrapper>
   );

@@ -23,6 +23,7 @@
       "ducks": ["src/app/ducks/index"],
       "images/*": ["src/app/static/images/*"],
       "services/*": ["src/app/services/*"],
+      "screens/": ["src/app/screens/*"],
       "store": ["src/app/store"],
       "styles/*": ["src/app/styles/*"],
       "styles": ["src/app/styles/index"],
