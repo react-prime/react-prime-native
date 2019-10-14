@@ -1,5 +1,4 @@
 import React from 'react';
-import PT from 'prop-types';
 import { Path } from 'react-native-svg';
 import SvgWrapper from './SvgWrapper';
 

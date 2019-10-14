@@ -7,6 +7,35 @@
     "babel-plugin-styled-components",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-export-namespace-from"
+    "@babel/plugin-proposal-export-namespace-from",
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "extensions": [".ts", ".tsx"],
+        "alias": {
+          "app": "./src/app",
+          "components": "./src/app/components",
+          "common/*": "src/app/components/common/*",
+          "config/*": "src/config/*",
+          "config": "src/config/index",
+          "ducks/*": "src/app/ducks/*",
+          "ducks": "src/app/ducks/index",
+          "images/*": "src/app/static/images/*",
+          "modules/*": "src/app/components/modules/*",
+          "navigators/*": "src/app/components/navigators/*",
+          "services/*": "src/app/services/*",
+          "screens/": "src/app/screens/*",
+          "static": "./src/app/static",
+          "store": "src/app/store",
+          "styles/*": "src/app/styles/*",
+          // "styles": "src/app/styles/index",
+          // "styled-components": "src/sapp/services/styled-components",
+          "types": "src/app/types/index",
+          "vectors/*": "src/app/static/vectors/*"
+        },
+        "cwd": "babelrc"
+      }
+    ]
   ]
 }
