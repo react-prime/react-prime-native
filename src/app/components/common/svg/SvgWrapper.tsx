@@ -8,16 +8,14 @@ const IconWrapper = styled.View`
 `;
 
 const SvgWrapper: React.FC<SvgWrapperProps> = ({ width, height, children }) => {
-  const viewBoxWidth = width;
-  const viewBoxHeight = height;
-  const viewBoxRatio = viewBoxWidth / viewBoxHeight;
+  const viewBoxRatio = width / height;
 
   return (
     <IconWrapper>
       <Svg
         width={width || (height && height * viewBoxRatio)}
         height={height || (width && width / viewBoxRatio)}
-        viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
+        viewBox={`0 0 ${width} ${height}`}
       >
         {children}
       </Svg>
@@ -26,8 +24,8 @@ const SvgWrapper: React.FC<SvgWrapperProps> = ({ width, height, children }) => {
 };
 
 type SvgWrapperProps = {
-  height?: number;
-  width?: number;
+  height: number;
+  width: number;
 }
 
 export default SvgWrapper;
