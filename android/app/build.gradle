@@ -6,11 +6,9 @@ project.ext.envConfigFiles = [
   proddebug: ".env.prod",
   prodrelease: ".env.prod",
 ]
-apply plugin: "com.android.application"
-apply plugin: 'io.fabric'
 
+apply plugin: "com.android.application"
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
-apply from: "$project.rootDir/buildConfig/buildConfig.gradle"
 
 import com.android.build.OutputFile
 
@@ -171,7 +169,7 @@ android {
             dimension "default"
             applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
-            buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative test\""
+            // buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative test\""
             manifestPlaceholders = [
                 appIcon: "@mipmap/ic_launcher_test",
                 appIconRound: "@mipmap/ic_launcher_test"
@@ -181,7 +179,7 @@ android {
             dimension "default"
             applicationIdSuffix ".acc"
             versionNameSuffix "-acc"
-            buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative acc\""
+            // buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative acc\""
             manifestPlaceholders = [
                 appIcon: "@mipmap/ic_launcher_acc",
                 appIconRound: "@mipmap/ic_launcher_acc"
@@ -189,7 +187,7 @@ android {
         }
         prod {
             dimension "default"
-            buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative\""
+            // buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative\""
             manifestPlaceholders = [
                 appIcon: "@mipmap/ic_launcher",
                 appIconRound: "@mipmap/ic_launcher"
