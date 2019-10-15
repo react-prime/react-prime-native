@@ -1,7 +1,7 @@
 import theme from 'styles/theme';
 import { ThemedStyledComponentsModule } from '../../../node_modules/@types/styled-components';
 // @ts-ignore
-import * as styledComponents from '../../node_modules/styled-components/dist/styled-components.browser.cjs';
+import * as styledComponents from '../../../node_modules/styled-components/dist/styled-components.browser.cjs';
 
 const {
   default: styled,

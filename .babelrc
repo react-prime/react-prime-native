@@ -11,28 +11,24 @@
     [
       "module-resolver",
       {
-        "root": ["./"],
-        "extensions": [".ts", ".tsx"],
+        "extensions": [".js", ".ts", ".tsx", ".ios.js", ".android.js"],
         "alias": {
           "app": "./src/app",
           "components": "./src/app/components",
-          "common/*": "src/app/components/common/*",
-          "config/*": "src/config/*",
-          "config": "src/config/index",
-          "ducks/*": "src/app/ducks/*",
-          "ducks": "src/app/ducks/index",
-          "images/*": "src/app/static/images/*",
-          "modules/*": "src/app/components/modules/*",
-          "navigators/*": "src/app/components/navigators/*",
-          "services/*": "src/app/services/*",
-          "screens/": "src/app/screens/*",
+          "common": "./src/app/components/common",
+          "config": "./src/config",
+          "ducks": "./src/app/ducks",
+          "images": "./src/app/static/images",
+          "modules": "./src/app/components/modules",
+          "navigators": "./src/app/components/navigators",
+          "screens": "./src/app/components/screens",
+          "services": "./src/app/services",
           "static": "./src/app/static",
-          "store": "src/app/store",
-          "styles/*": "src/app/styles/*",
-          // "styles": "src/app/styles/index",
-          // "styled-components": "src/sapp/services/styled-components",
-          "types": "src/app/types/index",
-          "vectors/*": "src/app/static/vectors/*"
+          "store": "./src/app/store",
+          "styles": "./src/app/styles",
+          "styled-components": "./src/app/services/styled-components",
+          "types": "./src/app/types",
+          "vectors": "./src/app/static/vectors"
         },
         "cwd": "babelrc"
       }
