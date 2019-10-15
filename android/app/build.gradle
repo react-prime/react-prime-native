@@ -143,7 +143,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0.0"
-        resValue "string", "build_config_package", "com.reactprimenative"
     }
     splits {
         abi {
@@ -169,7 +168,6 @@ android {
             dimension "default"
             applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
-            // buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative test\""
             manifestPlaceholders = [
                 appIcon: "@mipmap/ic_launcher_test",
                 appIconRound: "@mipmap/ic_launcher_test"
@@ -179,7 +177,6 @@ android {
             dimension "default"
             applicationIdSuffix ".acc"
             versionNameSuffix "-acc"
-            // buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative acc\""
             manifestPlaceholders = [
                 appIcon: "@mipmap/ic_launcher_acc",
                 appIconRound: "@mipmap/ic_launcher_acc"
@@ -187,7 +184,6 @@ android {
         }
         prod {
             dimension "default"
-            // buildConfigField "String", FIELD_APP_NAME, "\"reactprimenative\""
             manifestPlaceholders = [
                 appIcon: "@mipmap/ic_launcher",
                 appIconRound: "@mipmap/ic_launcher"
