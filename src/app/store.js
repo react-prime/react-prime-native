@@ -4,26 +4,13 @@ import { createAppContainer } from 'react-navigation';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import * as appReducers from 'ducks';
-import api from 'services/api';
-
 import RootNavigator from 'navigators/RootNavigator';
 
-const middleware = applyMiddleware(thunk.withExtraArgument(api));
-
-const reducers = combineReducers({
-  ...appReducers,
-});
-
-const rootReducer = (state, action) => {
-  if (action.type === 'RESET_APP') {
-    state = undefined;
-  }
-
-  return reducers(state, action);
-};
+const middleware = applyMiddleware(thunk);
+const reducers = combineReducers({ ...appReducers });
 
 export const AppContainer = createAppContainer(RootNavigator);
 
 export const store = __DEV__
-  ? createStore(rootReducer, composeWithDevTools(middleware))
-  : createStore(rootReducer, middleware);
+  ? createStore(reducers, composeWithDevTools(middleware))
+  : createStore(reducers, middleware);
