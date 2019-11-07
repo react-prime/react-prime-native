@@ -31,7 +31,7 @@ The app icons can be changed. For Android you can find the icons in `android/app
 
 
 ## 🚀 Releasing
-I recommend using a version branch as used in [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). For example create a branch called `release/1.0.1`. On this bracnh, do not forget to bump your version- and build numbers. For iOS open `ios/PROJECT.xcworkspace` and bump the numbers in the Info tab. For Android open `android/app/build.gradle` and look for `versionCode` and `versionName`.
+I recommend using a version branch as used in [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). For example create a branch called `release/1.0.1`. Run the application in both production and development environments and fix the latest bugs. Also do not forget to bump your version- and build numbers. For iOS open `ios/PROJECT.xcworkspace` and bump the numbers in the Info tab. For Android open `android/app/build.gradle` and look for `versionCode` and `versionName`.
 
 
 ## ⚡️ Animations
