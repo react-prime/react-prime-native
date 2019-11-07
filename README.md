@@ -23,7 +23,7 @@ This will start the project with the correct simulator. You can also run you pro
 This repository support TypeScript. Create your project using `npx create-react-prime PROJECT --type native --typescript`.
 
 
-## Environments
+## ️⚒️ Environments
 The different environments are managed via productFlavors for Android and schemes for iOS. The Android productFlavors can be found in `android/app/build.gradle`. For iOS you can find the schemes by opening the `ios/PROJECT.xcworkspace` file. The schemes will be shown in the top left corner.
 
 #### App icons
