@@ -7,7 +7,7 @@ This boilerplate is based on the core principles of [React Prime](https://github
 
 Install all dependencies as described in the [React Native docs](https://facebook.github.io/react-native/docs/getting-started "React Native Docs") (Don't forget to select the "React Native CLI Quickstart" tab instead of "Expo CLI Quickstart"). Also install Xcode and Android Studio as suggested in the docs.
 
-## Installation
+## 📖 Installation
 To install the project we recommend to use our [NPX command create-react-prime](https://github.com/react-prime/create-react-prime). To create a React Native project you can run `npx create-react-prime PROJECT --type native`.
 
 Before you start, install the project dependencies (1/2; Make sure Cocoapods is installed as well). Next run the React Native metro bundler in a terminal tab (3). In a seperate terminal tab you have to run the project for the platform of choice (4):
@@ -19,25 +19,34 @@ Before you start, install the project dependencies (1/2; Make sure Cocoapods is 
 
 This will start the project with the correct simulator. You can also run you project on physical devices. Connect your device via usb. For iOS you will have to open `ios/PROJECT.xcworkspace` in Xcode and select your device in the top left corner. For Android you have to look into using [`adb`](https://developer.android.com/studio/command-line/adb). List your connected device by running `adb devices`. With a device connected `npm run android` will automatically open the project on your device.
 
-### TypeScript
+#### TypeScript
 This repository support TypeScript. Create your project using `npx create-react-prime PROJECT --type native --typescript`.
+
 
 ## Environments
 The different environments are managed via productFlavors for Android and schemes for iOS. The Android productFlavors can be found in `android/app/build.gradle`. For iOS you can find the schemes by opening the `ios/PROJECT.xcworkspace` file. The schemes will be shown in the top left corner.
 
-### App icons
+#### App icons
 The app icons can be changed. For Android you can find the icons in `android/app/src/main/res/mipmap-*`. You can just replace the icons. For iOS you can replace the files in `ios/PROJECT/Images.xcassets`. Although you can edit the images via Xcode as well.
 
-## Releasing
+
+## 🚀 Releasing
 I recommend using a version branch as used in [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). For example create a branch called `release/1.0.1`. On this bracnh, do not forget to bump your version- and build numbers. For iOS open `ios/PROJECT.xcworkspace` and bump the numbers in the Info tab. For Android open `android/app/build.gradle` and look for `versionCode` and `versionName`.
 
-## Animations
+
+## ⚡️ Animations
 React Native runs, separately from Native code, on a JS thread instead of the UI thread. Between these threads there is a "Bridge" to communicate. This communication is mostly expensive and slow. To run animations on 60FPS you can use declarative animations on the UI thread using the third-party libraries [`react-native-gesture-handler`](https://github.com/kmagiera/react-native-gesture-handler) and [`react-native-reanimated`](https://github.com/kmagiera/react-native-reanimated). This talk [Declarative future of gestures and animations in React Native](https://www.youtube.com/watch?v=kdq4z2708VM) explains more about declarative animations.
 
-## Debugging
+
+## 📱 Testing
+If you want to extend your application with tests I recommend to look into [`react-native-testing-library`](https://github.com/callstack/react-native-testing-library) for unit testing or [`detox`](https://github.com/wix/Detox) for end-to-end testing.
+
+
+## 🔍 Debugging
 The upcoming React Native version 0.62.x will include a new debugging tool by default called [Flipper](https://fbflipper.com/). This seems like a promising library, but for now I can recommend to check out [react-native-debugger](https://github.com/jhen0409/react-native-debugger). This let's you debug for example the Redux Store and Network Requests.
 
-## Third-party libraries
+
+## 💚 Third-party libraries
 #### `react-native-config`
 To manage different variables for the different environments we use [`react-native-config`](https://github.com/luggit/react-native-config). It loads an `.env.*` file via productFlavors on Android and schemes on iOS. This is all setup and works out of the box. You can add secrets in your environment files. It's up to you if you add them to your `.gitignore`.
 
