@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
   getTransformModulePath() {
@@ -16,5 +16,5 @@ module.exports = {
       path.resolve(__dirname),
       path.resolve(__dirname, '../native'),
     ];
-  }
+  },
 };

@@ -33,7 +33,7 @@
       "styles": ["./src/app/styles"],
       "styles/*": ["./src/app/styles/*"],
       "styled-components": ["./src/app/services/styled-components"],
-      "types": ["./src/app/types"],
+      "types": ["./src/app/types/index"],
       "vectors": ["./src/app/static/vectors"]
     },
     "typeRoots": ["node_modules/@types"],
