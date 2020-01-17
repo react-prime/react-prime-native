@@ -10,6 +10,8 @@ const Bolt: React.FC<BoltProps> = (props) => (
 );
 
 type BoltProps = {
+  width?: number;
+  height?: number;
   fill: string;
 }
 
