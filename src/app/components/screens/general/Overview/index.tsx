@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform, Text } from 'react-native';
 
-import { OverviewContainer } from './styled';
+import { Container } from 'common/general';
 
 const instructions = Platform.select({
   ios: 'Overview screen on iOS',
@@ -9,9 +9,9 @@ const instructions = Platform.select({
 });
 
 const Overview: React.FC = () => (
-  <OverviewContainer>
+  <Container>
     <Text>{instructions}</Text>
-  </OverviewContainer>
+  </Container>
 );
 
 export default Overview;

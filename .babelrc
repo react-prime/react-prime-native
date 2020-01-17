@@ -11,7 +11,7 @@
     [
       "module-resolver",
       {
-        "extensions": [".js", ".ts", ".tsx", ".ios.js", ".android.js"],
+        "extensions": [".js", ".ts", ".tsx", ".ios.js", ".android.js", ".ios.ts", ".android.ts"],
         "alias": {
           "app": "./src/app",
           "common": "./src/app/components/common",
