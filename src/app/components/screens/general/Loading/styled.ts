@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { View } from 'react-native';
+import styled from 'styled-components';
 
 export const LoadingContainer = styled(View)`
   justify-content: center;

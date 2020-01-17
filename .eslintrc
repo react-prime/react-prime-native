@@ -46,7 +46,7 @@
         ]
       }
     ],
-    "indent": ["error", 2],
+    "indent": "off",
     "jsx-quotes": ["error", "prefer-double"],
     "key-spacing": ["error",
       {

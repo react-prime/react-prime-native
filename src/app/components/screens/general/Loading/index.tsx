@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { Text } from 'react-native';
-import { NavigationInjectedProps } from 'react-navigation';
-
-import { withNavigation } from 'react-navigation';
+import { NavigationInjectedProps, withNavigation } from 'react-navigation';
 
 import { LoadingContainer } from './styled';
 

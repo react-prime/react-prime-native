@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { StatusBar } from 'react-native';
 import { Provider } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
 import RNBootSplash from 'react-native-bootsplash';
+import { ThemeProvider } from 'styled-components';
 
 import theme from 'styles/theme';
 import { store, AppContainer } from './store';

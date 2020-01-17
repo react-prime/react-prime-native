@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import Svg from 'react-native-svg';
+import styled from 'styled-components';
 
 const IconWrapper = styled.View`
   display: flex;
@@ -30,6 +30,6 @@ type SvgWrapperProps = {
   height?: number;
   width?: number;
   viewBox: string;
-}
+};
 
 export default SvgWrapper;

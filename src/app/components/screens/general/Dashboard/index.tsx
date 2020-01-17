@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import * as i from 'types';
 import { connect } from 'react-redux';
 import { Platform, Text } from 'react-native';
+import * as i from 'types';
 
 import { getData } from 'ducks/data';
 
@@ -30,7 +30,7 @@ type DashboardProps = {
   data?: boolean;
   getData: i.GetData['action'];
   loading: boolean;
-}
+};
 
 export default connect(
   (state: i.ReduxState) => ({
