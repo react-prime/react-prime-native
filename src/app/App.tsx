@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { StatusBar } from 'react-native';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import RNBootSplash from 'react-native-bootsplash';
@@ -14,6 +15,7 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
+        <StatusBar barStyle="dark-content" backgroundColor="white" />
         <AppContainer />
       </ThemeProvider>
     </Provider>
