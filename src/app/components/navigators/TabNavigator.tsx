@@ -11,8 +11,8 @@ const TabNavigator = createBottomTabNavigator(
     DashboardTab: {
       screen: Dashboard,
       navigationOptions: () => ({
-        tabBarIcon: ({ tintColor }) => ( // eslint-disable-line
-          <Bolt width="24" height="35" fill={tintColor} />
+        tabBarIcon: ({ tintColor }) => (
+          <Bolt width={22} height={28} fill={tintColor || theme.colors.white} />
         ),
         tabBarLabel: 'Dashboard',
       }),
@@ -20,8 +20,8 @@ const TabNavigator = createBottomTabNavigator(
     OverviewTab: {
       screen: Overview,
       navigationOptions: () => ({
-        tabBarIcon: ({ tintColor }) => ( // eslint-disable-line
-          <Bolt width="24" height="35" fill={tintColor} />
+        tabBarIcon: ({ tintColor }) => (
+          <Bolt width={22} height={28} fill={tintColor || theme.colors.white} />
         ),
         tabBarLabel: 'Overview',
       }),

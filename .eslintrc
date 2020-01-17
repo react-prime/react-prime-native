@@ -1,6 +1,7 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "extends": [
+    "plugin:@typescript-eslint/recommended",
     "react-app",
     "plugin:react-native/all"
   ],
@@ -45,7 +46,7 @@
         ]
       }
     ],
-    "indent": ["error", 2],
+    "indent": "off",
     "jsx-quotes": ["error", "prefer-double"],
     "key-spacing": ["error",
       {
@@ -76,20 +77,13 @@
         "maxEOF": 0
       }
     ],
-    "no-console": [2,
-      {
-        "allow": [
-          "info",
-          "error"
-        ]
-      }
-    ],
+    "no-console": [2, {
+      "allow": ["info", "error"]
+    }],
     "no-trailing-spaces": ["error"],
     "object-curly-spacing": ["error", "always"],
     "prefer-const": ["error"],
     "quotes": ["error", "single"],
-    "react/no-unused-prop-types": 2,
-    "react/prop-types": 2,
     "react/self-closing-comp": ["error",
       {
         "component": true,
@@ -101,7 +95,7 @@
     "react-native/no-inline-styles": 2,
     "react-native/no-color-literals": 2,
     "react-native/no-raw-text": 0,
-    "semi": ["error", "always"],
+    "semi": "off",
     "space-before-blocks": "error",
     "space-before-function-paren": ["error",
       {
@@ -112,6 +106,20 @@
     ],
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
-    "eol-last": ["error", "always"]
+    "eol-last": ["error", "always"],
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/prefer-interface": 0,
+    "@typescript-eslint/explicit-member-accessibility": 1,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/no-object-literal-type-assertion": 0,
+    "@typescript-eslint/no-parameter-properties": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/prefer-namespace-keyword": 0,
+    "@typescript-eslint/no-namespace": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/semi": ["error"]
   }
 }

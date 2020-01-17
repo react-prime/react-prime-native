@@ -58,36 +58,3 @@ To handle your locale storage you have to use [`@react-native-community/async-st
 
 #### `react-native-device-info`
 If you want detect certain devices it's recommended to use [`react-native-device-info`](https://github.com/react-native-community/react-native-device-info). This package offers a great Promise based API which let's you get all different kinds of data from the devices. Note the differences between Android and iOS.
-
-To use the data inside your styled components you can combine you data with the `<ThemeProvider />` in `App.js`. You can also use the data inside React Components using the React Context API. Both situations are provided in the example below:
-```javascript
-import theme from 'styles/theme';
-import { deviceIsIphoneXModel, deviceHasNotch } from 'services/deviceInfo';
-
-export const DeviceContext = React.createContext(null);
-
-const App = () => {
-  const [isIphoneXModel, setIsIphoneXModel] = useState(false);
-  const [hasNotch, setHasNotch] = useState(false);
-
-  useEffect(async () => {
-    const checkIsXModel = await deviceIsIphoneXModel();
-    const checkHasNotch = await deviceHasNotch();
-
-    setIsIphoneXModel(checkIsXModel);
-    setHasNotch(checkHasNotch);
-  }, []);
-
-  return (
-    <Provider store={store}>
-      <ThemeProvider theme={{ ...theme, ...this.state }}>
-        <DeviceContext.Provider value={this.state}>
-          <App />
-        </DeviceContext.Provider>
-      </ThemeProvider>
-    </Provider>
-  );
-};
-
-export default App;
-```

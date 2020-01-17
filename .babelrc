@@ -1,5 +1,8 @@
 {
-  "presets": ["module:metro-react-native-babel-preset"],
+  "presets": [
+    "module:metro-react-native-babel-preset",
+    "@babel/typescript"
+  ],
   "plugins": [
     "babel-plugin-styled-components",
     "@babel/plugin-syntax-dynamic-import",
@@ -8,18 +11,28 @@
     [
       "module-resolver",
       {
+        "extensions": [".js", ".ts", ".tsx", ".ios.js", ".android.js", ".ios.ts", ".android.ts"],
         "alias": {
-          "components": "./src/app/components",
+          "app": "./src/app",
           "common": "./src/app/components/common",
-          "navigators": "./src/app/components/navigators",
-          "modules": "./src/app/components/modules",
-          "screens": "./src/app/components/screens",
-          "ducks": "./src/app/ducks",
-          "services": "./src/app/services",
-          "styles": "./src/app/styles",
-          "static": "./src/app/static",
+          "common/*": "./src/app/components/common/*",
           "config": "./src/config",
-          "app": "./src/app"
+          "ducks": "./src/app/ducks",
+          "ducks/*": "./src/app/ducks/*",
+          "images": "./src/app/static/images",
+          "modules": "./src/app/components/modules",
+          "modules/*": "./src/app/components/modules/*",
+          "navigators": "./src/app/components/navigators",
+          "navigators/*": "./src/app/components/navigators/*",
+          "screens": "./src/app/components/screens",
+          "services": "./src/app/services",
+          "services/*": "./src/app/services/*",
+          "static": "./src/app/static",
+          "store": "./src/app/store",
+          "styles": "./src/app/styles",
+          "styled-components": "./src/app/services/styled-components",
+          "types": "./src/app/types/index",
+          "vectors": "./src/app/static/vectors"
         },
         "cwd": "babelrc"
       }

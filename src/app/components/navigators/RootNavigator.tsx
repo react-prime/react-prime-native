@@ -8,7 +8,6 @@ const RootNavigator = createSwitchNavigator({
   Main: MainNavigator,
 }, {
   initialRouteName: 'Loading',
-  headerMode: 'none',
 });
 
 export default RootNavigator;

@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { Text } from 'react-native';
-import PT from 'prop-types';
-import { withNavigation } from 'react-navigation';
+import { NavigationInjectedProps, withNavigation } from 'react-navigation';
 
 import { LoadingContainer } from './styled';
 
-const LoadingScreen = ({ navigation }) => {
+const LoadingScreen: React.FC<LoadingScreenProps> = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate('Main');
@@ -19,10 +18,6 @@ const LoadingScreen = ({ navigation }) => {
   );
 };
 
-LoadingScreen.propTypes = {
-  navigation: PT.shape({
-    navigate: PT.func,
-  }).isRequired,
-};
+type LoadingScreenProps = NavigationInjectedProps;
 
 export default withNavigation(LoadingScreen);
