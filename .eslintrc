@@ -95,7 +95,7 @@
     "react-native/no-inline-styles": 2,
     "react-native/no-color-literals": 2,
     "react-native/no-raw-text": 0,
-    "semi": ["error", "always"],
+    "semi": "off",
     "space-before-blocks": "error",
     "space-before-function-paren": ["error",
       {
@@ -119,6 +119,7 @@
     "@typescript-eslint/prefer-namespace-keyword": 0,
     "@typescript-eslint/no-namespace": 0,
     "@typescript-eslint/no-explicit-any": 0,
-    "@typescript-eslint/no-non-null-assertion": 0
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/semi": ["error"]
   }
 }

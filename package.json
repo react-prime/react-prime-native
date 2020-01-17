@@ -5,6 +5,7 @@
   "scripts": {
     "start": "react-native start",
     "lint": "eslint --ext .jsx --ext .js src/",
+    "typecheck": "tsc",
     "ios": "react-native run-ios --scheme \"reactprimenative - Test\" --configuration \"Test - Debug\" --simulator=\"iPhone 11\"",
     "android": "ENVFILE=.env.dev react-native run-android --variant=devDebug --appIdSuffix=dev",
     "android:release": "ENVFILE=.env.dev react-native run-android --variant=devRelease --appIdSuffix=dev",
