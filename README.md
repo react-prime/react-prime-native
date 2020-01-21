@@ -10,6 +10,8 @@ Install all dependencies as described in the [React Native docs](https://faceboo
 ## 📖 Installation
 To install the project we recommend to use our [NPX command create-react-prime](https://github.com/react-prime/create-react-prime). To create a React Native project you can run `npx create-react-prime PROJECT --type native`.
 
+🚨🚨🚨 Chose a lowercase name without any special characters e.g: `jobner`, `figo`, `rocycle`.
+
 Before you start, install the project dependencies (1/2; Make sure Cocoapods is installed as well). Next run the React Native metro bundler in a terminal tab (3). In a seperate terminal tab you have to run the project for the platform of choice (4):
 1. `npm install`
 2. `cd ios && pod install`
