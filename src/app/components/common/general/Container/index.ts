@@ -5,5 +5,3 @@ export const Container = styled.View`
   justify-content: center;
   align-items: center;
 `;
-
-export default Container;

@@ -1,1 +1,1 @@
-export { default as Bolt } from './Bolt';
+export * from './Bolt';

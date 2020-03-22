@@ -8,10 +8,8 @@ const instructions = Platform.select({
   android: 'Overview screen on Android',
 });
 
-const Overview: React.FC = () => (
+export const Overview: React.FC = () => (
   <Container>
     <Text>{instructions}</Text>
   </Container>
 );
-
-export default Overview;

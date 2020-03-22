@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
 import { Platform, Text } from 'react-native';
-import * as i from 'types';
 
+import { useDispatch, useSelector } from 'hooks';
 import { getData } from 'ducks/data';
 import { Container } from 'common/general';
 
@@ -11,9 +10,13 @@ const instructions = Platform.select({
   android: 'Welcome to React Native Prime on Android',
 });
 
-const Dashboard: React.FC<DashboardProps> = ({ getData, loading, data }) => {
+export const Dashboard: React.FC = () => {
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.data.data);
+  const loading = useSelector((state) => state.data.loading);
+
   useEffect(() => {
-    getData();
+    dispatch(getData());
   }, [getData]);
 
   return (
@@ -24,17 +27,3 @@ const Dashboard: React.FC<DashboardProps> = ({ getData, loading, data }) => {
     </Container>
   );
 };
-
-type DashboardProps = {
-  data?: boolean;
-  getData: i.GetData['action'];
-  loading: boolean;
-};
-
-export default connect(
-  (state: i.ReduxState) => ({
-    data: state.data.data,
-    loading: state.data.loading,
-  }),
-  { getData },
-)(Dashboard);

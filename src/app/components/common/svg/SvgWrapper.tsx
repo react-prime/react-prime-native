@@ -7,7 +7,7 @@ const IconWrapper = styled.View`
   justify-content: center;
 `;
 
-const SvgWrapper: React.FC<SvgWrapperProps> = ({
+export const SvgWrapper: React.FC<SvgWrapperProps> = ({
   width, height, fill, stroke, viewBox, ...props
 }) => {
   return (
@@ -31,5 +31,3 @@ type SvgWrapperProps = {
   width?: number;
   viewBox: string;
 };
-
-export default SvgWrapper;
