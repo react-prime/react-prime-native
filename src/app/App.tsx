@@ -1,22 +1,32 @@
 import React, { useEffect } from 'react';
-import { StatusBar } from 'react-native';
 import { Provider } from 'react-redux';
 import RNBootSplash from 'react-native-bootsplash';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { setStatusBar } from 'services';
 import { ThemeProvider } from 'styled-components';
 
 import theme from 'styles/theme';
-import { store, AppContainer } from './store';
+import RootNavigator from 'navigators/RootNavigator';
+
+import { store } from './store';
 
 const App: React.FC = () => {
+  const ref = React.useRef();
+
   useEffect(() => {
+    setStatusBar('light');
     RNBootSplash.hide({ duration: 250 });
   }, []);
 
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <StatusBar barStyle="dark-content" backgroundColor="white" />
-        <AppContainer />
+        <SafeAreaProvider>
+          <NavigationContainer ref={ref}>
+            <RootNavigator />
+          </NavigationContainer>
+        </SafeAreaProvider>
       </ThemeProvider>
     </Provider>
   );

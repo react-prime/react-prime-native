@@ -1,17 +1,23 @@
-import { createStackNavigator } from 'react-navigation-stack';
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import TabNavigator from './TabNavigator';
 
-const MainNavigator = createStackNavigator(
-  {
-    Tabs: {
-      screen: TabNavigator,
-    },
-  },
-  {
-    initialRouteName: 'Tabs',
-    headerMode: 'none',
-  },
+const Stack = createStackNavigator();
+
+const MainNavigator = () => (
+  <Stack.Navigator
+    initialRouteName="Tabs"
+    headerMode="none"
+    screenOptions={{
+      gestureEnabled: false,
+    }}
+  >
+    <Stack.Screen
+      name="Tabs"
+      component={TabNavigator}
+    />
+  </Stack.Navigator>
 );
 
 export default MainNavigator;
