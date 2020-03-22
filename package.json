@@ -15,11 +15,14 @@
     "@babel/polyfill": "7.8.7",
     "@react-native-community/async-storage": "1.8.1",
     "@react-native-community/masked-view": "0.1.7",
+    "@react-navigation/bottom-tabs": "^5.2.2",
+    "@react-navigation/native": "^5.1.1",
+    "@react-navigation/stack": "^5.2.3",
     "cross-fetch": "3.0.4",
     "qs": "6.9.1",
     "react": "16.13.1",
     "react-native": "0.61.5",
-    "react-native-bootsplash": "2.1.0",
+    "react-native-bootsplash": "1.2.1",
     "react-native-config": "1.0.0",
     "react-native-gesture-handler": "1.6.1",
     "react-native-reanimated": "1.7.0",
@@ -60,6 +63,7 @@
     "eslint-plugin-react-native": "3.8.1",
     "jetifier": "^1.6.5",
     "metro-react-native-babel-preset": "0.59.0",
+    "react-native-device-info": "^5.5.3",
     "react-native-typescript-transformer": "1.2.13",
     "typescript": "3.8.3"
   }
