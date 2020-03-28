@@ -248,7 +248,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -262,10 +262,9 @@
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "reactprimenative" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -424,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74A7BBA3F246AF56F284EC4F /* Pods-reactprimenative-reactprimenativeTests.prod - debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -447,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DD3F1392ABEE6F89DA14DDC /* Pods-reactprimenative-reactprimenativeTests.prod - release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = reactprimenativeTests/Info.plist;
@@ -467,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDC756BDA85B2687668B4B47 /* Pods-reactprimenative.prod - debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -489,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 18F8000A47993AE659951FFA /* Pods-reactprimenative.prod - release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BPB9XDSHJE;
@@ -563,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DA0549542A12430DCF7F5A4 /* Pods-reactprimenative.acc - debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAcc;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -585,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A8A3C81171B81A730488170 /* Pods-reactprimenative-reactprimenativeTests.acc - debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -654,6 +659,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B83D50BE63F3A0DE46590F73 /* Pods-reactprimenative.acc - release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAcc;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BPB9XDSHJE;
@@ -675,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63881B7822D73709AA771E7C /* Pods-reactprimenative-reactprimenativeTests.acc - release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = reactprimenativeTests/Info.plist;
@@ -748,6 +755,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF06258C38730A3BA14EEE67 /* Pods-reactprimenative.test - debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTest;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -770,6 +778,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC1014958512D21724580045 /* Pods-reactprimenative-reactprimenativeTests.test - debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -839,6 +848,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51347548A7674BCD013C9336 /* Pods-reactprimenative.test - release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTest;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BPB9XDSHJE;
@@ -860,6 +870,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 753D1CA7C4BCC1FEF795D35B /* Pods-reactprimenative-reactprimenativeTests.test - release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = reactprimenativeTests/Info.plist;
