@@ -44,6 +44,7 @@
 		1DA0549542A12430DCF7F5A4 /* Pods-reactprimenative.acc - debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.acc - debug.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.acc - debug.xcconfig"; sourceTree = "<group>"; };
 		1DD3F1392ABEE6F89DA14DDC /* Pods-reactprimenative-reactprimenativeTests.prod - release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative-reactprimenativeTests.prod - release.xcconfig"; path = "Target Support Files/Pods-reactprimenative-reactprimenativeTests/Pods-reactprimenative-reactprimenativeTests.prod - release.xcconfig"; sourceTree = "<group>"; };
 		25831BF34C0496DF8E7963DC /* Pods-reactprimenativeTests.acc - debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenativeTests.acc - debug.xcconfig"; path = "Target Support Files/Pods-reactprimenativeTests/Pods-reactprimenativeTests.acc - debug.xcconfig"; sourceTree = "<group>"; };
+		3888C679242F585B00475067 /* reactprimenative-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "reactprimenative-Bridging-Header.h"; sourceTree = "<group>"; };
 		492F237568038EAE494DCFB0 /* Pods-reactprimenative-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative-tvOS.release.xcconfig"; path = "Target Support Files/Pods-reactprimenative-tvOS/Pods-reactprimenative-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		51347548A7674BCD013C9336 /* Pods-reactprimenative.test - release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.test - release.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.test - release.xcconfig"; sourceTree = "<group>"; };
 		5B0A1281D102BB6132D8A5DF /* Pods-reactprimenativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenativeTests.release.xcconfig"; path = "Target Support Files/Pods-reactprimenativeTests/Pods-reactprimenativeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				3888C679242F585B00475067 /* reactprimenative-Bridging-Header.h */,
 			);
 			name = reactprimenative;
 			sourceTree = "<group>";
@@ -257,6 +259,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = BPB9XDSHJE;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -423,7 +426,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74A7BBA3F246AF56F284EC4F /* Pods-reactprimenative-reactprimenativeTests.prod - debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -447,7 +449,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DD3F1392ABEE6F89DA14DDC /* Pods-reactprimenative-reactprimenativeTests.prod - release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = reactprimenativeTests/Info.plist;
@@ -470,6 +471,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = BPB9XDSHJE;
@@ -483,6 +485,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = reactprimenative;
+				SWIFT_OBJC_BRIDGING_HEADER = "reactprimenative-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Prod - Debug";
@@ -493,6 +498,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BPB9XDSHJE;
 				INFOPLIST_FILE = reactprimenative/Info.plist;
@@ -505,6 +511,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = reactprimenative;
+				SWIFT_OBJC_BRIDGING_HEADER = "reactprimenative-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Prod - Release";
@@ -568,6 +576,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAcc;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = BPB9XDSHJE;
@@ -581,6 +590,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.$(PRODUCT_NAME:rfc1034identifier).acc";
 				PRODUCT_NAME = reactprimenative;
+				SWIFT_OBJC_BRIDGING_HEADER = "reactprimenative-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Acc - Debug";
@@ -589,7 +601,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A8A3C81171B81A730488170 /* Pods-reactprimenative-reactprimenativeTests.acc - debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -661,6 +672,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAcc;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BPB9XDSHJE;
 				INFOPLIST_FILE = reactprimenative/Info.plist;
@@ -673,6 +685,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.$(PRODUCT_NAME:rfc1034identifier).acc";
 				PRODUCT_NAME = reactprimenative;
+				SWIFT_OBJC_BRIDGING_HEADER = "reactprimenative-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Acc - Release";
@@ -681,7 +695,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63881B7822D73709AA771E7C /* Pods-reactprimenative-reactprimenativeTests.acc - release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = reactprimenativeTests/Info.plist;
@@ -757,6 +770,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTest;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = BPB9XDSHJE;
@@ -770,6 +784,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.$(PRODUCT_NAME:rfc1034identifier).test";
 				PRODUCT_NAME = reactprimenative;
+				SWIFT_OBJC_BRIDGING_HEADER = "reactprimenative-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Test - Debug";
@@ -778,7 +795,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC1014958512D21724580045 /* Pods-reactprimenative-reactprimenativeTests.test - debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -850,6 +866,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTest;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BPB9XDSHJE;
 				INFOPLIST_FILE = reactprimenative/Info.plist;
@@ -862,6 +879,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.$(PRODUCT_NAME:rfc1034identifier).test";
 				PRODUCT_NAME = reactprimenative;
+				SWIFT_OBJC_BRIDGING_HEADER = "reactprimenative-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = "Test - Release";
@@ -870,7 +889,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 753D1CA7C4BCC1FEF795D35B /* Pods-reactprimenative-reactprimenativeTests.test - release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = reactprimenativeTests/Info.plist;
