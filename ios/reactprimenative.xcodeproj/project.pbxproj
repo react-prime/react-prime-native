@@ -469,7 +469,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDC756BDA85B2687668B4B47 /* Pods-reactprimenative.prod - debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -500,7 +499,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 18F8000A47993AE659951FFA /* Pods-reactprimenative.prod - release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -584,7 +582,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DA0549542A12430DCF7F5A4 /* Pods-reactprimenative.acc - debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAcc;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -690,7 +687,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B83D50BE63F3A0DE46590F73 /* Pods-reactprimenative.acc - release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAcc;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -794,7 +790,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF06258C38730A3BA14EEE67 /* Pods-reactprimenative.test - debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTest;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -900,7 +895,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51347548A7674BCD013C9336 /* Pods-reactprimenative.test - release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconTest;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
