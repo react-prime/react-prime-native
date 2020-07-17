@@ -21,7 +21,7 @@
     "cross-fetch": "3.0.4",
     "qs": "6.9.3",
     "react": "16.13.1",
-    "react-native": "0.62.0",
+    "react-native": "0.63.1",
     "react-native-bootsplash": "1.2.1",
     "react-native-config": "1.0.0",
     "react-native-gesture-handler": "1.6.1",
