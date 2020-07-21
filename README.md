@@ -45,7 +45,7 @@ If you want to extend your application with tests I recommend to look into [`rea
 
 
 ## 🔍 Debugging
-The upcoming React Native version 0.62.x will include a new debugging tool by default called [Flipper](https://fbflipper.com/). This seems like a promising library, but for now I can recommend to check out [react-native-debugger](https://github.com/jhen0409/react-native-debugger). This let's you debug for example the Redux Store and Network Requests.
+Check out [react-native-debugger](https://github.com/jhen0409/react-native-debugger). This let's you debug for example the Redux Store and Network Requests.
 
 
 ## 💚 Third-party libraries
