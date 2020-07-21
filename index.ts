@@ -1,4 +1,6 @@
-import '@babel/polyfill';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 import { AppRegistry } from 'react-native';
 
 import App from './src/app/App';
