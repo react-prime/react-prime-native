@@ -15,7 +15,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* reactprimenativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reactprimenativeTests.m */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		595B1A5724C5F200004E67A5 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B1A5624C5F200004E67A5 /* BootSplash.storyboard */; };
 		AAA4444B17AB49FEDCC8AEB2 /* libPods-reactprimenative-reactprimenativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 008FA60B9E0B9F7D7CECA50D /* libPods-reactprimenative-reactprimenativeTests.a */; };
 		F1853ABC7C542CC8534F4CDD /* libPods-reactprimenative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BCD2D0F88B6F157F87E29CC /* libPods-reactprimenative.a */; };
 /* End PBXBuildFile section */
@@ -53,7 +53,7 @@
 		2D02E47B1E0B4A5D006451C7 /* reactprimenative-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "reactprimenative-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* reactprimenative-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "reactprimenative-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E051E4D9E91763F0619D3F /* Pods-reactprimenative-reactprimenativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative-reactprimenativeTests.debug.xcconfig"; path = "Target Support Files/Pods-reactprimenative-reactprimenativeTests/Pods-reactprimenative-reactprimenativeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = reactprimenative/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		595B1A5624C5F200004E67A5 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = reactprimenative/BootSplash.storyboard; sourceTree = "<group>"; };
 		8BCD2D0F88B6F157F87E29CC /* libPods-reactprimenative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactprimenative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9038420FAA6A4C001A1761 /* Pods-reactprimenative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative.debug.xcconfig"; path = "Target Support Files/Pods-reactprimenative/Pods-reactprimenative.debug.xcconfig"; sourceTree = "<group>"; };
 		EB309C5BD6C8B7625C5F251E /* Pods-reactprimenative-reactprimenativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactprimenative-reactprimenativeTests.release.xcconfig"; path = "Target Support Files/Pods-reactprimenative-reactprimenativeTests/Pods-reactprimenative-reactprimenativeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				595B1A5624C5F200004E67A5 /* BootSplash.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = reactprimenative;
@@ -178,7 +178,6 @@
 				44E051E4D9E91763F0619D3F /* Pods-reactprimenative-reactprimenativeTests.debug.xcconfig */,
 				EB309C5BD6C8B7625C5F251E /* Pods-reactprimenative-reactprimenativeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -322,7 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				595B1A5724C5F200004E67A5 /* BootSplash.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +356,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh index.ts\n";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -597,6 +596,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = reactprimenative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -619,6 +619,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = reactprimenative/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
