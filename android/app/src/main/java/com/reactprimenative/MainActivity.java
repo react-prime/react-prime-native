@@ -12,8 +12,8 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 public class MainActivity extends ReactActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        RNBootSplash.show(R.drawable.bootsplash, MainActivity.this);
+      super.onCreate(savedInstanceState);
+      RNBootSplash.init(R.drawable.bootsplash, MainActivity.this);
     }
 
     /**
