@@ -7,6 +7,5 @@ module.exports = {
         resetCache: true,
       },
     }),
-    babelTransformerPath: require.resolve('react-native-typescript-transformer'),
   },
 };
