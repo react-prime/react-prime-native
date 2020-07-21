@@ -21,6 +21,8 @@ Before you start, install the project dependencies (1/2; Make sure Cocoapods is 
 
 This will start the project with the correct simulator. You can also run you project on physical devices. Connect your device via usb. For iOS you will have to open `ios/PROJECT.xcworkspace` in Xcode and select your device in the top left corner. For Android you have to look into using [`adb`](https://developer.android.com/studio/command-line/adb). List your connected device by running `adb devices`. With a device connected `npm run android` will automatically open the project on your device.
 
+Latest tested, working Android Studio Gradle version is **v3.6.3.**
+
 #### TypeScript
 This repository support TypeScript. Create your project using `npx create-react-prime PROJECT --type native --typescript`.
 
