@@ -28,9 +28,12 @@ This repository support TypeScript. Create your project using `npx create-react-
 ## ️⚒️ Environments
 The different environments are managed via productFlavors for Android and schemes for iOS. The Android productFlavors can be found in `android/app/build.gradle`. For iOS you can find the schemes by opening the `ios/PROJECT.xcworkspace` file. The schemes will be shown in the top left corner.
 
-#### App icons
+## 🎨 App icons
+### Manually
 The app icons can be changed. For Android you can find the icons in `android/app/src/main/res/mipmap-*`. You can just replace the icons. For iOS you can replace the files in `ios/PROJECT/Images.xcassets`. Although you can edit the images via Xcode as well.
 
+### Automatic asset generation
+The app icons can be generated. For this you can find an `assets` folder in the root of the project, where you place the required app icon that will be used for the new splash screen. Please follow the documentation of [Bootsplash](https://github.com/zoontek/react-native-bootsplash#assets-generation) to make a new splash screen with generated assets. Note that you need to delete the previous `.storyboard` file and pull the new one into Xcode in order to take effect.
 
 ## 🚀 Releasing
 I recommend using a version branch as used in [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). For example create a branch called `release/1.0.1`. Run the application in both production and development environments and fix the latest bugs. Also do not forget to bump your version- and build numbers. For iOS open `ios/PROJECT.xcworkspace` and bump the numbers in the Info tab. For Android open `android/app/build.gradle` and look for `versionCode` and `versionName`.
