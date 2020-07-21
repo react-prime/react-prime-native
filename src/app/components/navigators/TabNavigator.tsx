@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useSafeArea } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import theme from 'styles/theme';
 
@@ -11,7 +11,7 @@ import { Bolt } from 'common/svg';
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
-  const insets = useSafeArea();
+  const insets = useSafeAreaInsets();
 
   return (
     <Tab.Navigator
