@@ -1,6 +1,13 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+project 'reactprimenative',
+  'Prod - Debug' => :debug,
+  'Acc - Debug' => :debug,
+  'Test - Debug' => :debug,
+  'Prod - Release' => :release,
+  'Acc - Release' => :release,
+  'Test - Release' => :release
 platform :ios, '10.0'
 
 target 'reactprimenative' do
