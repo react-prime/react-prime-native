@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react-native",
-    "lib": ["es2017"],
+    "lib": ["es6"],
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,
@@ -42,5 +42,5 @@
     },
     "typeRoots": ["node_modules/@types"],
   },
-  "exclude": ["node_modules", "**/*.json", "**/*.spec.ts"]
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "**/*.json", "**/*.spec.ts"]
 }

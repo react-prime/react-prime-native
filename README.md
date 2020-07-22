@@ -21,6 +21,8 @@ Before you start, install the project dependencies (1/2; Make sure Cocoapods is 
 
 This will start the project with the correct simulator. You can also run you project on physical devices. Connect your device via usb. For iOS you will have to open `ios/PROJECT.xcworkspace` in Xcode and select your device in the top left corner. For Android you have to look into using [`adb`](https://developer.android.com/studio/command-line/adb). List your connected device by running `adb devices`. With a device connected `npm run android` will automatically open the project on your device.
 
+Latest tested, working Android Studio Gradle version is **v3.6.3.**
+
 #### TypeScript
 This repository support TypeScript. Create your project using `npx create-react-prime PROJECT --type native --typescript`.
 
@@ -28,9 +30,12 @@ This repository support TypeScript. Create your project using `npx create-react-
 ## ️⚒️ Environments
 The different environments are managed via productFlavors for Android and schemes for iOS. The Android productFlavors can be found in `android/app/build.gradle`. For iOS you can find the schemes by opening the `ios/PROJECT.xcworkspace` file. The schemes will be shown in the top left corner.
 
-#### App icons
+## 🎨 App icons
+### Manually
 The app icons can be changed. For Android you can find the icons in `android/app/src/main/res/mipmap-*`. You can just replace the icons. For iOS you can replace the files in `ios/PROJECT/Images.xcassets`. Although you can edit the images via Xcode as well.
 
+### Automatic asset generation
+The app icons can be generated. For this you can find an `assets` folder in the root of the project, where you place the required app icon that will be used for the new splash screen. Please follow the documentation of [Bootsplash](https://github.com/zoontek/react-native-bootsplash#assets-generation) to make a new splash screen with generated assets. Note that you need to delete the previous `.storyboard` file and pull the new one into Xcode in order to take effect.
 
 ## 🚀 Releasing
 I recommend using a version branch as used in [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). For example create a branch called `release/1.0.1`. Run the application in both production and development environments and fix the latest bugs. Also do not forget to bump your version- and build numbers. For iOS open `ios/PROJECT.xcworkspace` and bump the numbers in the Info tab. For Android open `android/app/build.gradle` and look for `versionCode` and `versionName`.
@@ -45,7 +50,7 @@ If you want to extend your application with tests I recommend to look into [`rea
 
 
 ## 🔍 Debugging
-The upcoming React Native version 0.62.x will include a new debugging tool by default called [Flipper](https://fbflipper.com/). This seems like a promising library, but for now I can recommend to check out [react-native-debugger](https://github.com/jhen0409/react-native-debugger). This let's you debug for example the Redux Store and Network Requests.
+Check out [react-native-debugger](https://github.com/jhen0409/react-native-debugger). This let's you debug for example the Redux Store and Network Requests.
 
 
 ## 💚 Third-party libraries
