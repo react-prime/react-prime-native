@@ -8,7 +8,7 @@ export const dataActions = {
   load: () => action('data/GET'),
   success: (success: boolean) => action('data/GET_SUCCESS', success),
   failed: () => action('data/GET_FAILED'),
-};
+} as const;
 
 const initialState: i.DataState = {
   data: undefined,
@@ -16,7 +16,7 @@ const initialState: i.DataState = {
   loading: false,
 };
 
-export default (state = initialState, action: ActionType<typeof dataActions>) => {
+export default (state = initialState, action: ActionType<typeof dataActions>): i.DataState => {
   switch (action.type) {
     case 'data/GET':
       return {

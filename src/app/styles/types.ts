@@ -1,8 +1,15 @@
 import * as i from 'types';
 import theme from './theme';
 
+export type Theme = typeof theme;
+
+// Add Theme type to styled-components
+declare module 'styled-components' {
+  export interface DefaultTheme extends i.Theme {}
+}
+
 export type BaseStyled = {
-  theme?: typeof theme;
+  theme?: i.Theme;
   className?: string;
 };
 

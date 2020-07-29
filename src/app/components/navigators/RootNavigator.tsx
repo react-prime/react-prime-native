@@ -6,7 +6,7 @@ import MainNavigator from './MainNavigator';
 
 const Stack = createStackNavigator();
 
-const RootNavigator = () => (
+const RootNavigator: React.FC = () => (
   <Stack.Navigator
     initialRouteName="Loading"
     headerMode="none"

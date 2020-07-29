@@ -3,8 +3,8 @@ import { Provider } from 'react-redux';
 import RNBootSplash from 'react-native-bootsplash';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { setStatusBar } from 'services';
 import { ThemeProvider } from 'styled-components';
+import { setStatusBar } from 'services';
 
 import theme from 'styles/theme';
 import RootNavigator from 'navigators/RootNavigator';

@@ -5,7 +5,7 @@ import TabNavigator from './TabNavigator';
 
 const Stack = createStackNavigator();
 
-const MainNavigator = () => (
+const MainNavigator: React.FC = () => (
   <Stack.Navigator
     initialRouteName="Tabs"
     headerMode="none"
