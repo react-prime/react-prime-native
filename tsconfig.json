@@ -12,6 +12,7 @@
     "strict": true,
     "target": "esnext",
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "paths": {
       "app": ["./src/app"],
       "common": ["./src/app/components/common"],

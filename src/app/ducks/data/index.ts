@@ -1,8 +1,8 @@
 /**
  * This is an example file from react-prime
  */
-import { ActionType, action } from 'typesafe-actions';
 import * as i from 'types';
+import { ActionType, action } from 'typesafe-actions';
 
 export const dataActions = {
   load: () => action('data/GET'),
