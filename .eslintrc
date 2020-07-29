@@ -125,6 +125,6 @@
       ],
       "allowDirectConstAssertionInArrowFunctions": true
     }],
-    "@typescript-eslint/ban-ts-comment": [0],
+    "@typescript-eslint/ban-ts-comment": [0]
   }
 }
