@@ -10,7 +10,7 @@ import { Bolt } from 'common/svg';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = () => {
+const TabNavigator: React.FC = () => {
   const insets = useSafeAreaInsets();
 
   return (

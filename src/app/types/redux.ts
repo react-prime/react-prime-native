@@ -23,8 +23,8 @@ export type ThunkDispatch = IThunkDispatch<i.ReduxState, any, i.Action>;
 
   ExtraArguments is passed as third argument in a thunk
 */
-type ExtraArguments = {};
-export type ThunkAction<ReturnType = void> = IThunkAction<ReturnType, i.ReduxState, ExtraArguments, i.Action>;
+type ExtraArgument = i.AnyObject;
+export type ThunkAction<ReturnType = void> = IThunkAction<ReturnType, i.ReduxState, ExtraArgument, i.Action>;
 
 /*
   Generator type for thunk actions
