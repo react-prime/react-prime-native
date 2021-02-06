@@ -20,16 +20,11 @@ const TabNavigator: React.FC = () => {
         activeTintColor: theme.colors.prime,
         inactiveTintColor: theme.colors.gray,
         style: {
-          height: hasNotch ? 90 : 55,
-          paddingTop: hasNotch ? 16 : 8,
+          height: hasNotch ? 84 : 56,
+          paddingTop: hasNotch ? 12 : 0,
           paddingBottom: insets.bottom,
           paddingHorizontal: 8,
           backgroundColor: theme.colors.black,
-        },
-        labelStyle: {
-          fontSize: 12,
-          lineHeight: 20,
-          fontFamily: theme.fonts.regular,
         },
       }}
     >

@@ -1,9 +1,9 @@
 import * as i from 'types';
 import React from 'react';
 import Svg from 'react-native-svg';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
-const IconWrapper = styled.view`
+const IconWrapper = styled.View`
   display: flex;
   justify-content: center;
 `;
