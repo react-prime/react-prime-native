@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 
 const RootNavigator: React.FC = () => (
   <Stack.Navigator
-    initialRouteName="Loading"
+    initialRouteName="Main"
     headerMode="none"
     screenOptions={{
       gestureEnabled: false,

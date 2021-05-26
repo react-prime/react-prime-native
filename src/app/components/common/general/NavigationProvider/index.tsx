@@ -4,6 +4,7 @@ import {
   InitialState,
   useLinking,
 } from '@react-navigation/native';
+import RNBootSplash from 'react-native-bootsplash';
 
 import theme from 'styles/theme';
 
@@ -34,24 +35,29 @@ export const NavigationProvider: React.FC = ({
     prefixes: ['reactprimenative://'],
   });
 
-  React.useEffect(() => {
-    const getState = () => {
-      getInitialState()
-        .then((state: InitialStateType) => {
-          if (state) {
-            setInitialState(state);
-          }
-          setIsReady(true);
-        });
-    };
+  const onGetState = () => {
+    getInitialState()
+      .then((state: InitialStateType) => {
+        if (state !== undefined) {
+          setInitialState(state);
+        }
+      });
 
-    setTimeout(getState, 500);
+    setIsReady(true);
+  };
+
+  React.useEffect(() => {
+    setTimeout(onGetState, 500);
   }, [getInitialState]);
 
   const value = React.useMemo(
     () => ({ initialState }),
     [initialState],
   );
+
+  const onNavigationReady = () => {
+    RNBootSplash.hide({ fade: true });
+  };
 
   if (!isReady) return null;
 
@@ -60,6 +66,7 @@ export const NavigationProvider: React.FC = ({
       ref={ref}
       theme={theme.navigationTheme}
       initialState={initialState}
+      onReady={onNavigationReady}
     >
       <NavigationContext.Provider value={value}>
         {children}
