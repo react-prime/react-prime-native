@@ -60,8 +60,8 @@ To manage different variables for the different environments we use [`react-nati
 #### `react-native-bootsplash`
 For creating a custom splashscreen we use [`react-native-bootsplash`](https://github.com/zoontek/react-native-bootsplash). This packages is created to design your launch screen using the platform depended tools [Xcode layout editor](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/) and [Android drawable resource](https://developer.android.com/guide/topics/resources/drawable-resource). You can find how to create splash screens over there.
 
-#### `@react-native-community/async-storage`
-To handle your locale storage you have to use [`@react-native-community/async-storage`](https://github.com/react-native-community/async-storage). This package let you handle local data based on a Promise API. Note that you can only store strings inside local data, just as on web.
+#### `@react-native-async-storage/async-storage`
+To handle your locale storage you have to use [`@react-native-async-storage/async-storage`](https://github.com/react-native-async-storage/async-storage). This package let you handle local data based on a Promise API. Note that you can only store strings inside local data, just as on web.
 
 #### `react-native-device-info`
 If you want detect certain devices it's recommended to use [`react-native-device-info`](https://github.com/react-native-community/react-native-device-info). This package offers a great Promise based API which let's you get all different kinds of data from the devices. Note the differences between Android and iOS.
