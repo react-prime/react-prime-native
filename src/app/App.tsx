@@ -1,24 +1,23 @@
-import React, { useEffect } from 'react';
-import { Provider } from 'react-redux';
+import React from 'react';
 import RNBootSplash from 'react-native-bootsplash';
+import { QueryClientProvider } from 'react-query';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ThemeProvider } from 'styled-components';
 
-import { setStatusBar } from 'services';
+import client from 'config/client';
 import theme from 'styles/theme';
+import { setStatusBar } from 'services';
 import RootNavigator from 'navigators/RootNavigator';
 import { NavigationWrapper } from 'common/general';
 
-import { store } from './store';
-
 const App: React.FC = () => {
-  useEffect(() => {
+  React.useEffect(() => {
     setStatusBar('light');
     RNBootSplash.hide({ fade: true });
   }, []);
 
   return (
-    <Provider store={store}>
+    <QueryClientProvider client={client}>
       <ThemeProvider theme={theme}>
         <SafeAreaProvider>
           <NavigationWrapper>
@@ -26,7 +25,7 @@ const App: React.FC = () => {
           </NavigationWrapper>
         </SafeAreaProvider>
       </ThemeProvider>
-    </Provider>
+    </QueryClientProvider>
   );
 };
 

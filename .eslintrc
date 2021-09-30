@@ -37,12 +37,23 @@
     "comma-dangle": ["error", "always-multiline"],
     "import/first": "error",
     "import/no-duplicates": "error",
-    "import/order": ["error",
+    "import/order": [
+      "error",
       {
         "groups": [
           "builtin",
           "external",
-          "internal"
+          "internal",
+          "index",
+          "parent",
+          "sibling"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "types",
+            "group": "builtin",
+            "position": "before"
+          }
         ]
       }
     ],

@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Platform, Text } from 'react-native';
 
-import { useDispatch, useSelector } from 'hooks';
-import { getData } from 'ducks/data';
 import { Container } from 'common/general';
 
 const instructions = Platform.select({
@@ -11,19 +9,9 @@ const instructions = Platform.select({
 });
 
 export const Dashboard: React.FC = () => {
-  const dispatch = useDispatch();
-  const data = useSelector((state) => state.data.data);
-  const loading = useSelector((state) => state.data.loading);
-
-  useEffect(() => {
-    dispatch(getData());
-  }, [getData]);
-
   return (
     <Container>
       <Text>{instructions}</Text>
-      {loading && <Text>Loading</Text>}
-      {data && <Text>Data from Redux is loaded</Text>}
     </Container>
   );
 };
