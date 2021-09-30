@@ -16,10 +16,10 @@ const TabNavigator: React.FC = () => {
   return (
     <Tab.Navigator
       initialRouteName="DashboardTab"
-      tabBarOptions={{
-        activeTintColor: theme.colors.prime,
-        inactiveTintColor: theme.colors.gray,
-        style: {
+      screenOptions={{
+        tabBarActiveTintColor: theme.colors.prime,
+        tabBarInactiveTintColor: theme.colors.gray,
+        tabBarStyle: {
           height: hasNotch ? 84 : 56,
           paddingTop: hasNotch ? 12 : 0,
           paddingBottom: insets.bottom,
