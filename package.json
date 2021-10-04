@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "private": true,
   "scripts": {
-    "start": "react-native start",
+    "start": "react-native start --reset-cache",
     "lint": "eslint --ext .jsx --ext .js --ext .tsx --ext .ts src/",
     "typecheck": "tsc --noEmit",
     "ios": "react-native run-ios --scheme \"reactprimenative - Test\" --configuration \"Test - Debug\"",

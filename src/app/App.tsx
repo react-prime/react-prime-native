@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Provider } from 'react-redux';
 import RNBootSplash from 'react-native-bootsplash';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -12,7 +12,7 @@ import { NavigationWrapper } from 'common/general';
 import { store } from './store';
 
 const App: React.FC = () => {
-  useEffect(() => {
+  React.useEffect(() => {
     setStatusBar('light');
     RNBootSplash.hide({ fade: true });
   }, []);
