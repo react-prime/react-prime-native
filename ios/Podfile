@@ -8,7 +8,8 @@ project 'reactprimenative',
   'Prod - Release' => :release,
   'Acc - Release' => :release,
   'Test - Release' => :release
-platform :ios, '10.0'
+
+platform :ios, '11.0'
 
 target 'reactprimenative' do
   config = use_native_modules!
@@ -27,8 +28,8 @@ target 'reactprimenative' do
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
-  # you should disable the next line.
-  use_flipper!('Flipper' => '0.75.1', configurations: ['Test - Debug', 'Acc - Debug', 'Prod - Debug'])
+  # you should disable the next line
+  # use_flipper!()
 
   post_install do |installer|
     react_native_post_install(installer)

@@ -8,8 +8,8 @@ const Stack = createStackNavigator();
 const MainNavigator: React.FC = () => (
   <Stack.Navigator
     initialRouteName="Tabs"
-    headerMode="none"
     screenOptions={{
+      headerShown: false,
       gestureEnabled: false,
     }}
   >
