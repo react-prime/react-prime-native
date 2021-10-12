@@ -1,11 +1,16 @@
 import React from 'react';
 
+import { setStatusBar } from 'services';
 import { useScrollContext } from 'modules/general';
 
 import { DasboardContainer, DashboardItem } from './styled';
 
 export const Dashboard: React.FC = () => {
   const { scrollHandler } = useScrollContext();
+
+  React.useEffect(() => {
+    setStatusBar('dark');
+  }, []);
 
   return (
     <DasboardContainer

@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 import Animated from 'react-native-reanimated';
 
 export const DasboardContainer = styled(Animated.ScrollView)`
-  padding: 24px;
+  padding: 48px 16px;
 `;
 
 export const DashboardItem = styled(MotiView)`

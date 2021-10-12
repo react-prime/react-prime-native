@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import { useScaleAnimation } from 'services';
 import { Container } from 'common/general';
-import { AnimatedText, Heading } from 'common/typography';
+import { AnimatedText, Heading, TextContent } from 'common/typography';
 
 import { ArrowView, TitleContainer } from './styled';
 
@@ -22,17 +22,17 @@ export const Screen1: React.FC = () => {
       } else {
         scaleIn.transitionTo('from');
       }
-    }, 3000);
+    }, 1500);
   }, []);
 
   return (
     <Container>
       <TitleContainer>
         <AnimatedText>
-          <Heading color="black">Label A</Heading>
+          <Heading color="black" size={40}>Onboarding</Heading>
         </AnimatedText>
         <AnimatedText>
-          <Heading color="gray" size={22}>A digital agency</Heading>
+          <Heading color="gray" size={22}>Welcome to the onboarding</Heading>
         </AnimatedText>
       </TitleContainer>
 
@@ -40,7 +40,9 @@ export const Screen1: React.FC = () => {
         <ArrowView
           state={scaleIn}
           transition={{ type: 'spring' }}
-        />
+        >
+          <TextContent color="white">Go</TextContent>
+        </ArrowView>
       </Pressable>
     </Container>
   );

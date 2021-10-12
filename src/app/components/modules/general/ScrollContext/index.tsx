@@ -14,7 +14,7 @@ const statusBarHeight = getStatusBarHeight();
 
 const STATUS_BAR = isIphone ? statusBarHeight + 24 : statusBarHeight;
 
-const MAX_HEADER_HEIGHT = 35 + STATUS_BAR;
+const MAX_HEADER_HEIGHT = 55 + STATUS_BAR;
 const MIN_HEADER_HEIGHT = 10 + STATUS_BAR;
 
 export const ScrollContext = React.createContext<ScrollContextProps>(

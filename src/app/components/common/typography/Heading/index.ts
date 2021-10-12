@@ -15,5 +15,5 @@ type HeadingProps = {
   uppercase?: boolean;
   margin?: string;
   color?: i.ColorsFromTheme<'black' | 'white' | 'prime' | 'gray'>;
-  size?: 18 | 22 | 24 | 28;
+  size?: 18 | 22 | 24 | 28 | 32 | 36 | 40;
 };

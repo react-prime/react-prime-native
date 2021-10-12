@@ -13,7 +13,7 @@ export const useFadeAnimation = () => useAnimationState({
 
 export const useScaleAnimation = () => useAnimationState({
   from: {
-    opacity: 0,
+    opacity: 0.5,
     transform: [{
       translateY: -15,
       scale: 0.5,

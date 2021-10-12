@@ -5,7 +5,7 @@ import { BottomTabHeaderProps } from '@react-navigation/bottom-tabs';
 import { useScrollContext } from 'modules/general';
 import { SnSLogo } from 'common/svg';
 
-import { ScreenHeaderContainer } from './styled';
+import { ScreenHeaderContainer, FilterBar } from './styled';
 
 export const ScreenHeader: React.FC<BottomTabHeaderProps> = () => {
   const { headerStyle, logoStyle } = useScrollContext();
@@ -15,6 +15,8 @@ export const ScreenHeader: React.FC<BottomTabHeaderProps> = () => {
       <Animated.View style={logoStyle}>
         <SnSLogo width={119} height={24} fill="#FFFFFF" />
       </Animated.View>
+
+      <FilterBar />
     </ScreenHeaderContainer>
   );
 };
