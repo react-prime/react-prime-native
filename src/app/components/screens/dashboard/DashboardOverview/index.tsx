@@ -34,6 +34,7 @@ export const DashboardOverview: React.FC = () => {
           >
             <SharedElement id={id}>
               <DashboardItem
+                isLast={index === 9}
                 from={{
                   opacity: 0,
                   translateY: 20,
