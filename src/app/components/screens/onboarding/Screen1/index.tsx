@@ -1,14 +1,18 @@
+import * as i from 'types';
 import * as React from 'react';
-import { MotiView } from 'moti';
+import { Pressable } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
 
 import { useScaleAnimation } from 'services';
 import { Container } from 'common/general';
-import { Heading } from 'common/typography';
+import { AnimatedText, Heading } from 'common/typography';
 
 import { ArrowView, TitleContainer } from './styled';
 
 export const Screen1: React.FC = () => {
   const scaleIn = useScaleAnimation();
+  const navigation = useNavigation<StackNavigationProp<i.OnboardingStack>>();
 
   React.useEffect(() => {
     setInterval(() => {
@@ -25,46 +29,20 @@ export const Screen1: React.FC = () => {
   return (
     <Container>
       <TitleContainer>
-        <MotiView
-          from={{
-            opacity: 0,
-            translateY: 20,
-          }}
-          animate={{
-            opacity: 1,
-            translateY: 0,
-          }}
-          transition={{
-            type: 'timing',
-            duration: 350,
-            delay: 500,
-          }}
-        >
+        <AnimatedText>
           <Heading color="black">Label A</Heading>
-        </MotiView>
-        <MotiView
-          from={{
-            opacity: 0,
-            translateY: 20,
-          }}
-          animate={{
-            opacity: 1,
-            translateY: 0,
-          }}
-          transition={{
-            type: 'timing',
-            duration: 350,
-            delay: 500,
-          }}
-        >
+        </AnimatedText>
+        <AnimatedText>
           <Heading color="gray" size={22}>A digital agency</Heading>
-        </MotiView>
+        </AnimatedText>
       </TitleContainer>
 
-      <ArrowView
-        state={scaleIn}
-        transition={{ type: 'spring' }}
-      />
+      <Pressable onPress={() => navigation.navigate('Screen2')}>
+        <ArrowView
+          state={scaleIn}
+          transition={{ type: 'spring' }}
+        />
+      </Pressable>
     </Container>
   );
 };
