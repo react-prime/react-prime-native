@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import * as i from 'types';
+import React from 'react';
 import { Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { LoadingContainer } from './styled';
 
 export const Loading: React.FC = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<i.DashboardNavigation>();
 
-  useEffect(() => {
+  React.useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('Main');
+      navigation.navigate('DashboardOverview');
     }, 2000);
   }, []);
 
