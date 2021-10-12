@@ -3,9 +3,9 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import theme from 'styles/theme';
-
 import { hasNotch } from 'services';
+import theme from 'styles/theme';
+import { ScreenHeader } from 'modules/headers';
 import { Dashboard, Overview } from 'screens/general';
 import { Bolt } from 'common/svg';
 
@@ -37,6 +37,7 @@ const TabNavigator: React.FC = () => {
             <Bolt width={16} height={22} fill={color || theme.colors.white} />
           ),
           tabBarLabel: 'Dashboard',
+          header: (props) => <ScreenHeader {...props} />,
         }}
       />
       <TabsStack.Screen
