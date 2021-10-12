@@ -1,7 +1,6 @@
 import * as i from 'types';
 import * as React from 'react';
 import { Pressable } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 
 import { useScaleAnimation } from 'services';
@@ -12,7 +11,7 @@ import { ArrowView, TitleContainer } from './styled';
 
 export const Screen1: React.FC = () => {
   const scaleIn = useScaleAnimation();
-  const navigation = useNavigation<StackNavigationProp<i.OnboardingStack>>();
+  const navigation = useNavigation<i.OnboardingNavigation>();
 
   React.useEffect(() => {
     setInterval(() => {
@@ -37,7 +36,7 @@ export const Screen1: React.FC = () => {
         </AnimatedText>
       </TitleContainer>
 
-      <Pressable onPress={() => navigation.navigate('Screen2')}>
+      <Pressable onPress={() => navigation.navigate('Tabs', { screen: 'DashboardTab' })}>
         <ArrowView
           state={scaleIn}
           transition={{ type: 'spring' }}
