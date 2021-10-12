@@ -1,5 +1,6 @@
 import React from 'react';
 import { Platform, Text } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 
 import { setStatusBar } from 'services';
 import { Container } from 'common/general';
@@ -10,9 +11,9 @@ const instructions = Platform.select({
 });
 
 export const Overview: React.FC = () => {
-  React.useEffect(() => {
+  useFocusEffect(React.useCallback(() => {
     setStatusBar('light');
-  }, []);
+  }, []));
 
   return (
     <Container>

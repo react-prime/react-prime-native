@@ -4,6 +4,7 @@ import { BottomTabHeaderProps } from '@react-navigation/bottom-tabs';
 
 import { useScrollContext } from 'modules/general';
 import { SnSLogo } from 'common/svg';
+import { TextContent } from 'common/typography';
 
 import { ScreenHeaderContainer, FilterBar } from './styled';
 
@@ -15,8 +16,11 @@ export const ScreenHeader: React.FC<BottomTabHeaderProps> = () => {
       <Animated.View style={logoStyle}>
         <SnSLogo width={119} height={24} fill="#FFFFFF" />
       </Animated.View>
-
-      <FilterBar />
+      <FilterBar>
+        <TextContent weight={600}>
+          Amsterdam
+        </TextContent>
+      </FilterBar>
     </ScreenHeaderContainer>
   );
 };

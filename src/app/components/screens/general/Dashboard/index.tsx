@@ -1,4 +1,5 @@
 import React from 'react';
+import { useFocusEffect } from '@react-navigation/native';
 
 import { setStatusBar } from 'services';
 import { useScrollContext } from 'modules/general';
@@ -8,9 +9,9 @@ import { DasboardContainer, DashboardItem } from './styled';
 export const Dashboard: React.FC = () => {
   const { scrollHandler } = useScrollContext();
 
-  React.useEffect(() => {
+  useFocusEffect(React.useCallback(() => {
     setStatusBar('dark');
-  }, []);
+  }, []));
 
   return (
     <DasboardContainer

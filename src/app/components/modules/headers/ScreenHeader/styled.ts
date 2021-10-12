@@ -13,6 +13,9 @@ export const ScreenHeaderContainer = styled(Animated.View)`
 const FILTER_BAR_WIDTH = Dimensions.get('window').width - 32;
 
 export const FilterBar = styled.View`
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 24px;
   position: absolute;
   bottom: -24px;
   left: 16px;
