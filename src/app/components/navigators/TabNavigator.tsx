@@ -9,6 +9,8 @@ import { ScreenHeader } from 'modules/headers';
 import { Dashboard, Overview } from 'screens/general';
 import { Bolt } from 'common/svg';
 
+import DashboardNavigator from './DashboardNavigator';
+
 const TabsStack = createBottomTabNavigator<i.TabsStack>();
 
 const TabNavigator: React.FC = () => {
@@ -31,13 +33,13 @@ const TabNavigator: React.FC = () => {
     >
       <TabsStack.Screen
         name="DashboardTab"
-        component={Dashboard}
+        component={DashboardNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <Bolt width={16} height={22} fill={color || theme.colors.white} />
           ),
           tabBarLabel: 'Dashboard',
-          header: (props) => <ScreenHeader {...props} />,
+          headerShown: false,
         }}
       />
       <TabsStack.Screen

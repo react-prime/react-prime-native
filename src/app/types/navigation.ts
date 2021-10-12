@@ -1,3 +1,4 @@
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { NavigatorScreenParams } from '@react-navigation/core';
 import { CompositeNavigationProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -7,8 +8,15 @@ export type OnboardingStack = {
   Screen2: undefined;
 };
 
+export type DashboardStack = {
+  DashboardOverview: undefined;
+  DashboardDetail: {
+    shareId: string;
+  };
+};
+
 export type TabsStack = {
-  DashboardTab: undefined;
+  DashboardTab: DashboardStack;
   OverviewTab: undefined;
 };
 
@@ -23,6 +31,14 @@ export type RootStack = {
 };
 
 // Screen specific types
+export type DashboardNavigation = CompositeNavigationProp<
+StackNavigationProp<DashboardStack>,
+CompositeNavigationProp<
+BottomTabNavigationProp<TabsStack>,
+StackNavigationProp<MainStack>
+>
+>;
+
 export type OnboardingNavigation = CompositeNavigationProp<
 StackNavigationProp<OnboardingStack>,
 StackNavigationProp<MainStack>
