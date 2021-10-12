@@ -31,7 +31,6 @@ export const Dashboard: React.FC = () => {
               translateY: 0,
             }}
             transition={{
-              type: 'timing',
               duration: 350,
               delay: 100 * index,
             }}

@@ -54,8 +54,23 @@ export const ScrollProvider = ({ children }: ScrollProviderProps) => {
     };
   });
 
+  const filterStyle = useAnimatedStyle(() => {
+    return {
+      top: interpolate(scrollPosition.value,
+        [0, MAX_HEADER_HEIGHT],
+        [100, 53],
+        Extrapolate.CLAMP,
+      ),
+    };
+  });
+
   return (
-    <ScrollContext.Provider value={{ scrollHandler, headerStyle, logoStyle }}>
+    <ScrollContext.Provider value={{
+      scrollHandler,
+      headerStyle,
+      logoStyle,
+      filterStyle,
+    }}>
       {children}
     </ScrollContext.Provider>
   );
@@ -68,6 +83,9 @@ type ScrollContextProps = {
   };
   logoStyle: {
     opacity: number;
+  };
+  filterStyle: {
+    top: number;
   };
 };
 

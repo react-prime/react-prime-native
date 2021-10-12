@@ -1,46 +1,28 @@
 import { Dimensions } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import { MotiView } from 'moti';
+import Animated from 'react-native-reanimated';
 
 import { TextContent } from 'common/typography';
 
 const FILTER_BAR_WIDTH = Dimensions.get('window').width - 32;
 
-export const FilterBarContainer = styled(MotiView)<FilterBarIsOpen>`
-  overflow: hidden;
+export const FilterBarHeader = styled(Animated.View)`
   position: absolute;
-  top: 100px;
   left: 16px;
-  width: ${FILTER_BAR_WIDTH}px;
-
-  /* ${({ isOpen }) => isOpen && css`
-    bottom: -86px;
-  `}; */
-`;
-
-export const FilterBarList = styled.View<FilterBarIsOpen>`
   align-items: flex-start;
-  justify-content: center;
-  padding: 0 24px;
-  height: 48px;
+  justify-content: flex-start;
   width: ${FILTER_BAR_WIDTH}px;
+  height: 48px;
+  padding: 3px 24px 0;
   background-color: ${({ theme }) => theme.colors.white};
+  border: 1px solid #EEEEEE;
   border-radius: 24px;
-  border: 1px solid ${({ theme }) => theme.colors.gray};
-
-  ${({ isOpen }) => isOpen && css`
-    height: 172px;
-  `};
+  overflow: hidden;
+  shadow-color: ${({ theme }) => theme.colors.black};
+  shadow-opacity: 0.29;
+  shadow-radius: 5px;
+  elevation: 7;
 `;
-
-// shadow-color: ${({ theme }) => theme.colors.black};
-// shadow-opacity: 0.29;
-// shadow-radius: 5px;
-// elevation: 7;
-
-type FilterBarIsOpen = {
-  isOpen: boolean;
-};
 
 export const FilterBarListItem = styled(TextContent)`
   width: 100%;

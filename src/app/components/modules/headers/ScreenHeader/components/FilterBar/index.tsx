@@ -1,35 +1,60 @@
 import * as React from 'react';
-import { Pressable } from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native';
+import { MotiView } from 'moti';
+import {
+  useSharedValue,
+  useAnimatedStyle,
+  useDerivedValue,
+  withSpring,
+  withTiming,
+  Extrapolate,
+  interpolate,
+} from 'react-native-reanimated';
 
-import { useLayout } from 'hooks';
+import { useAnimateFilterItems } from 'services';
+import { useScrollContext } from 'modules/general';
 
-import { FilterBarContainer, FilterBarList, FilterBarListItem } from './styled';
+import { FilterBarHeader, FilterBarListItem } from './styled';
+
+const OTHER_CITIES = ['Rotterdam', 'Utrecht', 'Eindhoven'];
 
 export const FilterBar: React.FC = () => {
-  const [{ height }, onLayout] = useLayout();
-  const [isOpen, setIsOpen] = React.useState(false);
+  const fadeIn = useAnimateFilterItems();
+  const { filterStyle } = useScrollContext();
+
+  const open = useSharedValue(false);
+  const progress = useDerivedValue(() =>
+    open.value ? withSpring(1) : withTiming(0),
+  );
+
+  const filterBarStyle = useAnimatedStyle(() => ({
+    height: interpolate(
+      progress.value,
+      [0, 1],
+      [48, 170],
+      Extrapolate.CLAMP,
+    ),
+  }));
 
   return (
-    <FilterBarContainer
-      isOpen={isOpen}
-      animate={{ height }}
-      transition={{ type: 'timing' }}
-    >
-      <Pressable onPress={() => setIsOpen(!isOpen)}>
-        <FilterBarList
-          onLayout={onLayout}
-          isOpen={isOpen}
-        >
-          <FilterBarListItem weight={600}>Amsterdam</FilterBarListItem>
-          {isOpen && (
-            <>
-              <FilterBarListItem weight={600}>Eindhoven</FilterBarListItem>
-              <FilterBarListItem weight={600}>Rotterdam</FilterBarListItem>
-              <FilterBarListItem weight={600}>Utrecht</FilterBarListItem>
-            </>
-          )}
-        </FilterBarList>
-      </Pressable>
-    </FilterBarContainer>
+    <TouchableWithoutFeedback onPress={() => {
+      fadeIn.transitionTo((state) => state === 'open' ? 'close' : 'open');
+      open.value = !open.value;
+    }}>
+      <FilterBarHeader style={[filterStyle, filterBarStyle]}>
+        <FilterBarListItem weight={600}>Amsterdam</FilterBarListItem>
+        {OTHER_CITIES.map((city, index) => {
+          return (
+            <MotiView
+              key={`filter_item_${index}`}
+              state={fadeIn}
+              transition={{ delay: 100 * index }}
+            >
+              <FilterBarListItem weight={600}>{city}</FilterBarListItem>
+            </MotiView>
+          );
+        })}
+      </FilterBarHeader>
+    </TouchableWithoutFeedback>
   );
 };
