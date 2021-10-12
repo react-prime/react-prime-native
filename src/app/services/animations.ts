@@ -11,7 +11,6 @@ export const useFadeAnimation = () => useAnimationState({
   },
 });
 
-
 export const useAnimateFilterItems = () => useAnimationState({
   initial: {
     opacity: 0,

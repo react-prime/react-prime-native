@@ -34,20 +34,25 @@ export const FilterBar: React.FC = () => {
       [48, 170],
       Extrapolate.CLAMP,
     ),
-  }));
+  }), [progress.value]);
 
   return (
-    <TouchableWithoutFeedback onPress={() => {
-      fadeIn.transitionTo((state) => state === 'open' ? 'close' : 'open');
-      open.value = !open.value;
-    }}>
+    <TouchableWithoutFeedback
+      onPress={() => {
+        fadeIn.transitionTo((state) => state === 'open' ? 'close' : 'open');
+        open.value = !open.value;
+      }}
+    >
       <FilterBarHeader style={[filterStyle, filterBarStyle]}>
-        <FilterBarListItem weight={600}>Amsterdam</FilterBarListItem>
+        <FilterBarListItem weight={600}>
+          Amsterdam
+        </FilterBarListItem>
         {OTHER_CITIES.map((city, index) => {
           return (
             <MotiView
               key={`filter_item_${index}`}
               state={fadeIn}
+              animateInitialState={false}
               transition={{ delay: 100 * index }}
             >
               <FilterBarListItem weight={600}>{city}</FilterBarListItem>

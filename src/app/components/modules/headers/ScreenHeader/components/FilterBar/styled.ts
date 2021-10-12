@@ -1,5 +1,5 @@
 import { Dimensions } from 'react-native';
-import styled, { css } from 'styled-components/native';
+import styled from 'styled-components/native';
 import Animated from 'react-native-reanimated';
 
 import { TextContent } from 'common/typography';
@@ -14,10 +14,8 @@ export const FilterBarHeader = styled(Animated.View)`
   width: ${FILTER_BAR_WIDTH}px;
   height: 48px;
   padding: 3px 24px 0;
-  background-color: ${({ theme }) => theme.colors.white};
-  border: 1px solid #EEEEEE;
   border-radius: 24px;
-  overflow: hidden;
+  background-color: ${({ theme }) => theme.colors.white};
   shadow-color: ${({ theme }) => theme.colors.black};
   shadow-opacity: 0.29;
   shadow-radius: 5px;
