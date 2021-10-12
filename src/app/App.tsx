@@ -9,6 +9,7 @@ import theme from 'styles/theme';
 import { setStatusBar } from 'services';
 import RootNavigator from 'navigators/RootNavigator';
 import { NavigationWrapper } from 'common/general';
+import { ScrollProvider } from 'modules/general';
 
 const App: React.FC = () => {
   React.useEffect(() => {
@@ -21,7 +22,9 @@ const App: React.FC = () => {
       <ThemeProvider theme={theme}>
         <SafeAreaProvider>
           <NavigationWrapper>
-            <RootNavigator />
+            <ScrollProvider>
+              <RootNavigator />
+            </ScrollProvider>
           </NavigationWrapper>
         </SafeAreaProvider>
       </ThemeProvider>

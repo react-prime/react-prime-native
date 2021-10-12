@@ -3,9 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import theme from 'styles/theme';
 
-export const NavigationWrapper: React.FC = ({
-  children,
-}) => {
+export const NavigationWrapper: React.FC = ({ children }) => {
   const ref = React.useRef(null);
 
   const linking = {

@@ -1,17 +1,37 @@
 import React from 'react';
-import { Platform, Text } from 'react-native';
 
-import { Container } from 'common/general';
+import { useScrollContext } from 'modules/general';
 
-const instructions = Platform.select({
-  ios: 'Welcome to React Native Prime on iOS',
-  android: 'Welcome to React Native Prime on Android',
-});
+import { DasboardContainer, DashboardItem } from './styled';
 
 export const Dashboard: React.FC = () => {
+  const { scrollHandler } = useScrollContext();
+
   return (
-    <Container>
-      <Text>{instructions}</Text>
-    </Container>
+    <DasboardContainer
+      onScroll={scrollHandler}
+      scrollEventThrottle={16}
+    >
+      {[...Array(10)].map((_, index) => {
+        return (
+          <DashboardItem
+            key={`item_${index}`}
+            from={{
+              opacity: 0,
+              translateY: 20,
+            }}
+            animate={{
+              opacity: 1,
+              translateY: 0,
+            }}
+            transition={{
+              type: 'timing',
+              duration: 350,
+              delay: 100 * index,
+            }}
+          />
+        );
+      })}
+    </DasboardContainer>
   );
 };

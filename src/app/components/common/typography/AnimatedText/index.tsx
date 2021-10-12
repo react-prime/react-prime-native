@@ -14,7 +14,7 @@ export const AnimatedText: React.FC = ({ children }) => {
       }}
       transition={{
         type: 'timing',
-        duration: 350,
+        duration: 500,
         delay: 500,
       }}
     >
