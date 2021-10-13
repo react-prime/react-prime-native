@@ -19,6 +19,7 @@ import { FilterBarHeader, FilterBarListItem } from './styled';
 const OTHER_CITIES = ['Rotterdam', 'Utrecht', 'Eindhoven'];
 
 export const FilterBar: React.FC = () => {
+  const [didAnimate, setDidAnimate] = React.useState(false);
   const fadeIn = useAnimateFilterItems();
   const { filterStyle } = useScrollContext();
 
@@ -53,7 +54,7 @@ export const FilterBar: React.FC = () => {
               key={`filter_item_${index}`}
               state={fadeIn}
               animateInitialState={false}
-              transition={{ delay: 100 * index }}
+              transition={{ delay: 50 * index }}
             >
               <FilterBarListItem weight={600}>{city}</FilterBarListItem>
             </MotiView>

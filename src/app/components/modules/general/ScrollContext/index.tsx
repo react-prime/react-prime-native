@@ -4,8 +4,10 @@ import {
   useSharedValue,
   useAnimatedScrollHandler,
   useAnimatedStyle,
+  withTiming,
   interpolate,
   Extrapolate,
+  cancelAnimation,
 } from 'react-native-reanimated';
 
 import { getStatusBarHeight, isIphone } from 'services';
@@ -35,21 +37,28 @@ export const ScrollProvider = ({ children }: ScrollProviderProps) => {
   });
 
   const headerStyle = useAnimatedStyle(() => {
+    cancelAnimation(scrollPosition);
     return {
-      height: interpolate(scrollPosition.value,
-        [0, MAX_HEADER_HEIGHT],
-        [MAX_HEADER_HEIGHT, MIN_HEADER_HEIGHT],
-        Extrapolate.CLAMP,
+      height: withTiming(
+        interpolate(scrollPosition.value,
+          [0, MIN_HEADER_HEIGHT],
+          [MAX_HEADER_HEIGHT, MIN_HEADER_HEIGHT],
+          Extrapolate.CLAMP,
+        ),
+        { duration: 10 },
       ),
     };
   });
 
   const logoStyle = useAnimatedStyle(() => {
     return {
-      opacity: interpolate(scrollPosition.value,
-        [0, MAX_HEADER_HEIGHT],
-        [1, 0],
-        Extrapolate.CLAMP,
+      opacity: withTiming(
+        interpolate(scrollPosition.value,
+          [0, MAX_HEADER_HEIGHT],
+          [1, 0],
+          Extrapolate.CLAMP,
+        ),
+        { duration: 10 },
       ),
     };
   });
