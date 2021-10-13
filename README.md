@@ -50,7 +50,10 @@ If you want to extend your application with tests I recommend to look into [`rea
 
 
 ## 🔍 Debugging
-Check out [react-native-debugger](https://github.com/jhen0409/react-native-debugger). This let's you debug for example the Redux Store and Network Requests.
+For debugging React Native application you should use [Flipper](https://fbflipper.com/). It's a native debug tool developed by Facebook, supporting all kinds of debugging from Network Requests to Logs and Crash Reports. There are many plugins available as well e.g. Redux Devtools or React Query Devtools.
+
+To install Flipper run (or [read installation instructions](https://fbflipper.com/docs/getting-started/index)):
+`brew install --cask flipper`
 
 
 ## 💚 Third-party libraries
