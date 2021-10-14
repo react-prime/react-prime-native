@@ -1,3 +1,4 @@
+import * as i from 'types';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -8,13 +9,13 @@ import { hasNotch } from 'services';
 import { Dashboard, Overview } from 'screens/general';
 import { Bolt } from 'common/svg';
 
-const Tab = createBottomTabNavigator();
+const TabsStack = createBottomTabNavigator<i.TabsStack>();
 
 const TabNavigator: React.FC = () => {
   const insets = useSafeAreaInsets();
 
   return (
-    <Tab.Navigator
+    <TabsStack.Navigator
       initialRouteName="DashboardTab"
       screenOptions={{
         tabBarActiveTintColor: theme.colors.prime,
@@ -28,7 +29,7 @@ const TabNavigator: React.FC = () => {
         },
       }}
     >
-      <Tab.Screen
+      <TabsStack.Screen
         name="DashboardTab"
         component={Dashboard}
         options={{
@@ -38,7 +39,7 @@ const TabNavigator: React.FC = () => {
           tabBarLabel: 'Dashboard',
         }}
       />
-      <Tab.Screen
+      <TabsStack.Screen
         name="OverviewTab"
         component={Overview}
         options={() => ({
@@ -48,7 +49,7 @@ const TabNavigator: React.FC = () => {
           tabBarLabel: 'Overview',
         })}
       />
-    </Tab.Navigator>
+    </TabsStack.Navigator>
   );
 };
 
