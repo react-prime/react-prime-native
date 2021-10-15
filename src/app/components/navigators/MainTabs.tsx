@@ -1,5 +1,5 @@
 import * as i from 'types';
-import React from 'react';
+import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import theme from 'styles/theme';

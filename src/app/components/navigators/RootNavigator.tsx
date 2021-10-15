@@ -1,11 +1,11 @@
 import * as i from 'types';
-import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import { Loading } from 'screens/general';
 import MainNavigator from './MainNavigator';
 
-const RootStack = createNativeStackNavigator<i.RootStack>();
+const RootStack = createStackNavigator<i.RootStack>();
 
 const RootNavigator: React.FC = () => (
   <RootStack.Navigator

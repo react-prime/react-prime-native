@@ -1,10 +1,10 @@
 import * as i from 'types';
-import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import MainTabs from './MainTabs';
 
-const MainStack = createNativeStackNavigator<i.MainTabBar>();
+const MainStack = createStackNavigator<i.MainTabBar>();
 
 const MainNavigator: React.FC = () => (
   <MainStack.Navigator

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Path } from 'react-native-svg';
 
 import { SvgWrapper } from './SvgWrapper';
