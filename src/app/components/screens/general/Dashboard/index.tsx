@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Platform, Text } from 'react-native';
 
 import { useDispatch, useSelector } from 'hooks';
@@ -15,7 +15,7 @@ export const Dashboard: React.FC = () => {
   const data = useSelector((state) => state.data.data);
   const loading = useSelector((state) => state.data.loading);
 
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(getData());
   }, [getData]);
 

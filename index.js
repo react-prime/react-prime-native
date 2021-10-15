@@ -1,4 +1,5 @@
 import 'regenerator-runtime/runtime';
+import 'react-native-reanimated';
 
 import { AppRegistry } from 'react-native';
 
