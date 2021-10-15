@@ -1,15 +1,13 @@
-import { NavigatorScreenParams } from '@react-navigation/core';
-
-export type TabsStack = {
+export type MainTabsStack = {
   DashboardTab: undefined;
   OverviewTab: undefined;
 };
 
-export type MainStack = {
-  Tabs: NavigatorScreenParams<TabsStack>;
+export type MainTabBar = {
+  MainTabs: MainTabsStack;
 };
 
 export type RootStack = {
   Loading: undefined;
-  Main: NavigatorScreenParams<MainStack>;
+  Main: MainTabBar;
 };
