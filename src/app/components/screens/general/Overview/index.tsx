@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Platform, Text } from 'react-native';
 
 import { Container } from 'common/general';
