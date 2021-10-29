@@ -147,6 +147,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0.0"
+        resValue "string", "build_config_package", "com.reactprimenative"
     }
     splits {
         abi {
