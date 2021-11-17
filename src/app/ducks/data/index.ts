@@ -8,7 +8,7 @@ export const dataActions = {
   load: () => action('data/GET'),
   success: (success: boolean) => action('data/GET_SUCCESS', success),
   failed: () => action('data/GET_FAILED'),
-} as const;
+};
 
 const initialState: i.DataState = {
   data: undefined,
