@@ -1,23 +1,21 @@
-import React from 'react';
+import * as i from 'types';
+import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import TabNavigator from './TabNavigator';
+import MainTabs from './MainTabs';
 
-const Stack = createStackNavigator();
+const MainStack = createStackNavigator<i.MainTabBar>();
 
 const MainNavigator: React.FC = () => (
-  <Stack.Navigator
-    initialRouteName="Tabs"
+  <MainStack.Navigator
+    initialRouteName="MainTabs"
     screenOptions={{
       headerShown: false,
       gestureEnabled: false,
     }}
   >
-    <Stack.Screen
-      name="Tabs"
-      component={TabNavigator}
-    />
-  </Stack.Navigator>
+    <MainStack.Screen name="MainTabs" component={MainTabs} />
+  </MainStack.Navigator>
 );
 
 export default MainNavigator;

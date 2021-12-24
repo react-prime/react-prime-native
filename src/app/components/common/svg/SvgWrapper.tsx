@@ -1,5 +1,4 @@
-import * as i from 'types';
-import React from 'react';
+import * as React from 'react';
 import Svg from 'react-native-svg';
 import styled from 'styled-components/native';
 
@@ -9,7 +8,7 @@ const IconWrapper = styled.View`
 `;
 
 export const SvgWrapper: React.FC<SvgWrapperProps> = ({
-  width, height, fill, stroke, viewBox, ...props
+  children, width, height, fill, stroke, viewBox,
 }) => {
   return (
     <IconWrapper>
@@ -18,14 +17,13 @@ export const SvgWrapper: React.FC<SvgWrapperProps> = ({
         height={height}
         viewBox={viewBox}
       >
-        {React.cloneElement(props.children, { fill, stroke })}
+        {React.cloneElement(children as React.ReactElement, { fill, stroke })}
       </Svg>
     </IconWrapper>
   );
 };
 
 type SvgWrapperProps = {
-  children: React.DetailedReactHTMLElement<i.AnyObject, HTMLElement>;
   fill?: string;
   stroke?: string;
   height?: number;

@@ -1,20 +1,18 @@
-import React from 'react';
+import * as i from 'types';
+import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import theme from 'styles/theme';
-
 import { hasNotch } from 'services';
-import { Dashboard, Overview } from 'screens/general';
+import { Dashboard } from 'screens/general/Dashboard';
+import { Overview } from 'screens/general/Overview';
 import { Bolt } from 'common/svg';
 
-const Tab = createBottomTabNavigator();
+const MainTabsStack = createBottomTabNavigator<i.MainTabsStack>();
 
-const TabNavigator: React.FC = () => {
-  const insets = useSafeAreaInsets();
-
+const MainTabs: React.FC = () => {
   return (
-    <Tab.Navigator
+    <MainTabsStack.Navigator
       initialRouteName="DashboardTab"
       screenOptions={{
         tabBarActiveTintColor: theme.colors.prime,
@@ -22,13 +20,12 @@ const TabNavigator: React.FC = () => {
         tabBarStyle: {
           height: hasNotch ? 84 : 56,
           paddingTop: hasNotch ? 12 : 0,
-          paddingBottom: insets.bottom,
           paddingHorizontal: 8,
           backgroundColor: theme.colors.black,
         },
       }}
     >
-      <Tab.Screen
+      <MainTabsStack.Screen
         name="DashboardTab"
         component={Dashboard}
         options={{
@@ -38,7 +35,7 @@ const TabNavigator: React.FC = () => {
           tabBarLabel: 'Dashboard',
         }}
       />
-      <Tab.Screen
+      <MainTabsStack.Screen
         name="OverviewTab"
         component={Overview}
         options={() => ({
@@ -48,8 +45,8 @@ const TabNavigator: React.FC = () => {
           tabBarLabel: 'Overview',
         })}
       />
-    </Tab.Navigator>
+    </MainTabsStack.Navigator>
   );
 };
 
-export default TabNavigator;
+export default MainTabs;

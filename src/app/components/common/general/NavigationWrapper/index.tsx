@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+import { useFlipper } from '@react-navigation/devtools';
 
 import theme from 'styles/theme';
 
 export const NavigationWrapper: React.FC = ({
   children,
 }) => {
-  const ref = React.useRef(null);
+  const navigationRef = React.useRef(null);
+  useFlipper(navigationRef);
 
   const linking = {
     prefixes: ['reactprimenative://'],
@@ -14,7 +16,7 @@ export const NavigationWrapper: React.FC = ({
 
   return (
     <NavigationContainer
-      ref={ref}
+      ref={navigationRef}
       theme={theme.navigationTheme}
       linking={linking}
     >

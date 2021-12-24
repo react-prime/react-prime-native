@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import RNBootSplash from 'react-native-bootsplash';
 import { QueryClientProvider } from 'react-query';
 import { SafeAreaProvider } from 'react-native-safe-area-context';

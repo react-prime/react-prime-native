@@ -1,28 +1,29 @@
-import React from 'react';
+import * as i from 'types';
+import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { Loading } from 'screens/general';
 import MainNavigator from './MainNavigator';
 
-const Stack = createStackNavigator();
+const RootStack = createStackNavigator<i.RootStack>();
 
 const RootNavigator: React.FC = () => (
-  <Stack.Navigator
+  <RootStack.Navigator
     initialRouteName="Loading"
     screenOptions={{
       headerShown: false,
       gestureEnabled: false,
     }}
   >
-    <Stack.Screen
+    <RootStack.Screen
       name="Loading"
       component={Loading}
     />
-    <Stack.Screen
+    <RootStack.Screen
       name="Main"
       component={MainNavigator}
     />
-  </Stack.Navigator>
+  </RootStack.Navigator>
 );
 
 export default RootNavigator;

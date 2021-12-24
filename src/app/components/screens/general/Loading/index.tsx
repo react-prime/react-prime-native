@@ -1,13 +1,19 @@
-import React, { useEffect } from 'react';
+import * as React from 'react';
 import { Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 import { LoadingContainer } from './styled';
 
-export const Loading: React.FC = () => {
-  const navigation = useNavigation();
+type LoadingNavigationProps = {
+  Loading: undefined;
+  Main: undefined;
+};
 
-  useEffect(() => {
+export const Loading: React.FC = () => {
+  const navigation = useNavigation<StackNavigationProp<LoadingNavigationProps, 'Loading'>>();
+
+  React.useEffect(() => {
     setTimeout(() => {
       navigation.navigate('Main');
     }, 2000);
