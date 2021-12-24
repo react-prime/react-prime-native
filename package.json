@@ -40,7 +40,7 @@
     "@babel/plugin-transform-object-assign": "^7.16.5",
     "@babel/preset-typescript": "7.16.5",
     "@babel/runtime": "7.16.5",
-    "@react-navigation/devtools": "^6.0.4",
+    "@react-navigation/devtools": "6.0.4",
     "@types/react": "17.0.38",
     "@types/react-native": "0.66.10",
     "@types/styled-components": "5.1.19",
