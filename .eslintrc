@@ -35,23 +35,26 @@
     "comma-dangle": ["error", "always-multiline"],
     "import/first": "error",
     "import/no-duplicates": "error",
-    "import/order": ["error", {
-      "groups": [
-        "builtin",
-        "external",
-        "internal",
-        "index",
-        "parent",
-        "sibling"
-      ],
-      "pathGroups": [
-        {
-          "pattern": "types",
-          "group": "builtin",
-          "position": "before"
-        }
-      ]
-    }],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "index",
+          "parent",
+          "sibling"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "types",
+            "group": "builtin",
+            "position": "before"
+          }
+        ]
+      }
+    ],
     "indent": "off",
     "jsx-quotes": ["error", "prefer-double"],
     "key-spacing": ["error", {
