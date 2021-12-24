@@ -11,7 +11,6 @@ const instructions = Platform.select({
 export const Dashboard: React.FC = () => {
   return (
     <Container>
-      <Text>Android</Text>
       <Text>{instructions}</Text>
     </Container>
   );
