@@ -8,11 +8,11 @@ import { Dashboard } from 'screens/general/Dashboard';
 import { Overview } from 'screens/general/Overview';
 import { Bolt } from 'common/svg';
 
-const MainTabsStack = createBottomTabNavigator<i.MainTabsStack>();
+const TabsStack = createBottomTabNavigator<i.TabsStack>();
 
-const MainTabs: React.FC = () => {
+const TabNavigator: React.FC = () => {
   return (
-    <MainTabsStack.Navigator
+    <TabsStack.Navigator
       initialRouteName="DashboardTab"
       screenOptions={{
         tabBarActiveTintColor: theme.colors.prime,
@@ -25,7 +25,7 @@ const MainTabs: React.FC = () => {
         },
       }}
     >
-      <MainTabsStack.Screen
+      <TabsStack.Screen
         name="DashboardTab"
         component={Dashboard}
         options={{
@@ -35,7 +35,7 @@ const MainTabs: React.FC = () => {
           tabBarLabel: 'Dashboard',
         }}
       />
-      <MainTabsStack.Screen
+      <TabsStack.Screen
         name="OverviewTab"
         component={Overview}
         options={() => ({
@@ -45,8 +45,8 @@ const MainTabs: React.FC = () => {
           tabBarLabel: 'Overview',
         })}
       />
-    </MainTabsStack.Navigator>
+    </TabsStack.Navigator>
   );
 };
 
-export default MainTabs;
+export default TabNavigator;
