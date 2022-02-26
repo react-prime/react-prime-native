@@ -12,8 +12,8 @@ import { NavigationWrapper } from 'common/general';
 
 const App: React.FC = () => {
   React.useEffect(() => {
-    setStatusBar('light');
-    RNBootSplash.hide({ fade: true });
+    setStatusBar('dark');
+    RNBootSplash.hide();
   }, []);
 
   return (

@@ -9,7 +9,7 @@
       android:icon="${appIcon}"
       android:roundIcon="${appIconRound}"
       android:allowBackup="false"
-      android:theme="@style/AppTheme"
+      android:theme="@style/BootTheme"
     >
         <activity
             android:name=".MainActivity"
@@ -19,11 +19,6 @@
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
-        </activity>
-
-        <activity
-          android:name="com.zoontek.rnbootsplash.RNBootSplashActivity"
-          android:theme="@style/BootTheme">
           <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />

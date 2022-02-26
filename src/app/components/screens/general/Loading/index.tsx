@@ -14,6 +14,8 @@ export const Loading: React.FC = () => {
   const navigation = useNavigation<StackNavigationProp<LoadingNavigationProps, 'Loading'>>();
 
   React.useEffect(() => {
+    console.log('LOADING');
+
     setTimeout(() => {
       navigation.navigate('Main');
     }, 2000);
