@@ -41,6 +41,7 @@
     "@babel/preset-typescript": "7.16.7",
     "@babel/runtime": "7.17.2",
     "@react-navigation/devtools": "6.0.5",
+    "@types/qs": "^6.9.7",
     "@types/react": "17.0.39",
     "@types/react-native": "0.66.16",
     "@types/styled-components": "5.1.23",
