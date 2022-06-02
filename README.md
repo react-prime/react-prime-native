@@ -2,7 +2,7 @@
   <img src="https://github.com/JBostelaar/react-prime/blob/master/src/static/images/prime-logo.png" alt="prime-logo" width="250px" />
 </p>
 
-⚠️**This repository has been moved to the [Prime Monorepo](https://github.com/LabelA/prime-monorepo/tree/main/boilerplates/react-web)**.
+⚠️**This repository has been moved to the [Prime Monorepo](https://github.com/LabelA/prime-monorepo/tree/main/boilerplates/react-mobile)**.
 
 # React Native Prime
 
